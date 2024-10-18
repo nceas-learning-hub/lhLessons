@@ -1,3 +1,7 @@
+---
+title: Literate Analysis with Quarto
+---
+
 ## Learning Objectives {.unnumbered}
 
 -   Introduce literate analysis using Quarto (an extension of RMarkdown's features)

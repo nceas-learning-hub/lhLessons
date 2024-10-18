@@ -1,3 +1,8 @@
+---
+title: Working in R & RStudio
+
+---
+
 ## Learning Objectives {.unnumbered}
 
 -   Get oriented with the RStudio interface
