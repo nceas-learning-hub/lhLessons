@@ -290,7 +290,6 @@ It should look like this:
 ```{r}
 #| eval: false
 
-
 library(readr)
 library(here)
 ```
@@ -308,16 +307,15 @@ The `here()` function helps navigate this file path mix up in a straight forward
 
 Now, under "Read data", add a code chunk that uses the `read_csv()` with the `here()` function to read in your data file.
 
-```{r}
+```{r load data for quarto book}
 #| echo: false
-
-
 library(readr)
 
-bg_chem <- read_csv("data/BGchem2008data.csv")
+### Quarto book structure: script-specific data in script-specific folder
+bg_chem <- read_csv("data/r_quarto_literate_analysis/BGchem2008data.csv")
 ```
 
-```{r}
+```{r demonstrate how to load data from student repo}
 #| eval: false
 
 bg_chem <- read_csv(here::here("data/BGchem2008data.csv"))
