@@ -6,7 +6,7 @@
 
 ## Introduction to Version Control
 
-![](images/phd_comics_final.png){width="70%" fig-align="center"}
+![](images/github_introduction/phd_comics_final.png){width="70%" fig-align="center"}
 
 Every file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when bugs are discovered. Sometimes those fixes lead to even more bugs, leading to more changes in the code base. Data files get combined together. Sometimes those same files are split and combined again. In just one research project, we can expect thousands of changes to occur. 
 
@@ -32,13 +32,13 @@ Before diving into the details of Git and how to use it, let's start with a moti
 Say, for example, you're working on an analysis in R and you've got it into a state you're pretty happy with. We'll call this version 1:
 
 :::{.column-body-outset-right}
-![](images/git-intro-slide01.png)
+![](images/github_introduction/git-intro-slide01.png)
 :::
 
 You come into the office the following day and you have an email from your boss, "Hey, you know what this model needs?"
 
 :::{.column-body-outset}
-![](images/git-intro-slide02.png)
+![](images/github_introduction/git-intro-slide02.png)
 :::
 
 You're not entirely sure what she means but you figure there's only one thing she could be talking about: more cowbell. So you add it to the model in order to really explore the space.
@@ -46,13 +46,13 @@ You're not entirely sure what she means but you figure there's only one thing sh
 But you're worried about losing track of the old model so, instead of editing the code in place, you comment out the old code and put as serious a warning as you can muster in a comment above it.
 
 :::{.column-body-outset}
-![](images/git-intro-slide03.png)
+![](images/github_introduction/git-intro-slide03.png)
 :::
 
 Commenting out code you don't want to lose is something probably all of us have done at one point or another but it's really hard to understand why you did this when you come back years later or you when you send your script to a colleague. Luckily, there's a better way: Version control. Instead of commenting out the old code, we can change the code in place and tell Git to commit our change. So now we have two distinct versions of our analysis and we can always see what the previous version(s) look like.
 
 :::{.column-body-outset}
-![](images/git-intro-slide04.png)
+![](images/github_introduction/git-intro-slide04.png)
 :::
 
 You may have noticed something else in the diagram above: Not only can we save a new version of our analysis, we can also write as much text as we like about the change in the commit message. In addition to the commit message, Git also tracks who, when, and where the change was made.
@@ -60,7 +60,7 @@ You may have noticed something else in the diagram above: Not only can we save a
 Imagine that some time has gone by and you've committed a third version of your analysis, version 3, and a colleague emails with an idea: What if you used machine learning instead?
 
 :::{.column-body-outset}
-![](images/git-intro-slide05.png)
+![](images/github_introduction/git-intro-slide05.png)
 :::
 
 Maybe you're not so sure the idea will work out and this is where a tool like Git shines. Without a tool like Git, we might copy analysis.R to another file called analysis-ml.R which might end up having mostly the same code except for a few lines. This isn't particularly problematic until you want to make a change to a bit of shared code and now you have to make changes in two files, if you even remember to.
@@ -68,37 +68,37 @@ Maybe you're not so sure the idea will work out and this is where a tool like Gi
 Instead, with Git, we can start a branch. Branches allow us to confidently experiment on our code, all while leaving the old code in tact and recoverable.
 
 :::{.column-body-outset}
-![](images/git-intro-slide06.png)
+![](images/github_introduction/git-intro-slide06.png)
 :::
 
 So you've been working in a branch and have made a few commits on it and your boss emails again asking you to update the model in some way. If you weren't using a tool like Git, you might panic at this point because you've rewritten much of your analysis to use a different method but your boss wants change to the old method.
 
 :::{.column-body-outset}
-![](images/git-intro-slide07.png)
+![](images/github_introduction/git-intro-slide07.png)
 :::
 
 But with Git and branches, we can continue developing our main analysis at the same time as we are working on any experimental branches. Branches are great for experiments but also great for organizing your work generally.
 
 :::{.column-body-outset}
-![](images/git-intro-slide08.png)
+![](images/github_introduction/git-intro-slide08.png)
 :::
 
 After all that hard work on the machine learning experiment, you and your colleague could decide to scrap it. It's perfectly fine to leave branches around and switch back to the main line of development but we can also delete them to tidy up.
 
 :::{.column-body-outset}
-![](images/git-intro-slide09.png)
+![](images/github_introduction/git-intro-slide09.png)
 :::
 
 If, instead, you and your colleague had decided you liked the machine learning experiment, you could also merge the branch with your main development line. Merging branches is analogous to accepting a change in Word's Track Changes feature but way more powerful and useful.
 
 :::{.column-body-outset}
-![](images/git-intro-slide10.png)
+![](images/github_introduction/git-intro-slide10.png)
 :::
 
 A key takeaway here is that Git can drastically increase your confidence and willingness to make changes to your code and help you avoid problems down the road. Analysis rarely follows a linear path and we need a tool that respects this.
 
 :::{.column-body-outset}
-![](images/git-intro-slide11.png)
+![](images/github_introduction/git-intro-slide11.png)
 :::
 
 Finally, imagine that, years later, your colleague asks you to make sure the model you reported in a paper you published together was actually the one you used. Another really powerful feature of Git is tags which allow us to record a particular state of our analysis with a meaningful name. In this case, we are lucky because we tagged the version of our code we used to run the analysis. Even if we continued to develop beyond commit 5 (above) after we submitted our manuscript, we can always go back and run the analysis as it was in the past.
@@ -124,7 +124,7 @@ Finally, imagine that, years later, your colleague asks you to make sure the mod
 - primarily used through the command-line interface (CLI, e.g. Terminal), but also has various GUI tools available (e.g. RStudio IDE)
 
 ::: {.column-margin}
-![](images/git-intro.png)
+![](images/github_introduction/git-intro.png)
 :::
 
 #### GitHub: {.unnumbered}
@@ -137,7 +137,7 @@ Finally, imagine that, years later, your colleague asks you to make sure the mod
 
 
 ::: {.column-margin}
-![](images/github-intro.png)
+![](images/github_introduction/github-intro.png)
 :::
 
 ### Understanding how local working files, Git, and GitHub all work together
@@ -159,7 +159,7 @@ Here is our example folder / Git repository represented visually:
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/git-repo.png")
+knitr::include_graphics("images/github_introduction/git-repo.png")
 ```
 
 <br>
@@ -182,28 +182,28 @@ The processes described in the above sections (i.e. making changes to local work
 
 [A basic git workflow represented as two islands, one with "local repo" and "working directory", and another with "remote repo." Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled "PUSH") and from the remote repo to the working directory (labeled "PULL").]{.aside}
 
-<!--# ![](images/git-flowchart.png) -->
+<!--# ![](images/github_introduction/git-flowchart.png) -->
 
-[![Artwork by Allison Horst](images/allison-horst-git-workflow.png)](https://twitter.com/allison_horst)
+[![Artwork by Allison Horst](images/github_introduction/allison-horst-git-workflow.png)](https://twitter.com/allison_horst)
 
 ### Let's Look at a GitHub Repository
 
 This screen shows the copy of a repository stored on GitHub, with its list of files, when the files and directories were last modified, and some information on who made the most recent changes.
 
 :::{.column-page}
-![](images/ss3sim-github.png)
+![](images/github_introduction/ss3sim-github.png)
 :::
 
 If we drill into the "commits" for the repository, we can see the history of changes made to all of the files. Looks like `kellijohnson` was working on the project and fixing errors in December:
 
 :::{.column-page}
-![](images/ss3sim-commits.png)
+![](images/github_introduction/ss3sim-commits.png)
 :::
 
 And finally, if we drill into one of the changes made on December 20, we can see exactly what was changed in each file:
 
 :::{.column-page}
-![](images/ss3sim-diff.png)
+![](images/github_introduction/ss3sim-diff.png)
 :::
 
 Tracking these changes, how they relate to released versions of software and files is exactly what Git and GitHub are good for. And we will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.
@@ -270,7 +270,7 @@ If you were successful, it should look something like this:
 
 
 :::{.column-body-outset}
-![](images/new-repo-github.png)
+![](images/github_introduction/new-repo-github.png)
 :::
 
 <br>
@@ -286,8 +286,8 @@ You should always add a `README.md` to the root directory of your repository -- 
 
 
 :::{.column-body-outset}
-![](images/github-test-repo.png)
-<!--![](images/github-test-repo-sam.png)--->
+![](images/github_introduction/github-test-repo.png)
+<!--![](images/github_introduction/github-test-repo-sam.png)--->
 :::
 
 
@@ -303,7 +303,7 @@ Navigate to the `README.md` file in the file listing, and edit it by clicking on
 
 <!-- :::{.column-page} -->
 
-![](images/github-test-edit.png)
+![](images/github_introduction/github-test-edit.png)
 
 <!-- ::: -->
 
@@ -315,7 +315,7 @@ Congratulations, you've now authored your first versioned commit! If you navigat
 
 <!-- :::{.column-page} -->
 
-![](images/github-test-displayed.png)
+![](images/github_introduction/github-test-displayed.png)
 
 <!-- ::: -->
 
@@ -366,7 +366,7 @@ We refer to the **remote copy** of the repository that is on GitHub as the **ori
 Start by clicking the green **Code** button (top right of your file listing) and copying the URL to your clipboard (this URL represents the repository location):
 
 :::{.column-body-outset}
-![](images/github-test-clone-url.png){width="70%" fig-align="center"}
+![](images/github_introduction/github-test-clone-url.png){width="70%" fig-align="center"}
 :::
 
 RStudio makes working with Git and version controlled files easy -- to do so, you'll need to be working within an R project folder. The following steps will look similar to those you followed when first creating an R Project, with a slight difference. Follow the instructions in the Setup box below to clone your remote repository to your local computer in RStudio:
@@ -379,15 +379,15 @@ RStudio makes working with Git and version controlled files easy -- to do so, yo
 -   Select **Version Control** and paste the remote repository URL (which should be copied to your clipboard) in the **Repository URL** field
 -   Press **Tab**, which will auto-fill the **Project directory name** field with the same name as that of your remote repo -- while you can name the local copy of the repository anything, it's typical (and highly recommended) to use the same name as the GitHub repository to maintain the correspondence
 
-<!-- ![](images/rstudio-clone-repo.png){width="90%" fig-align="center"} -->
-![](images/rstudio-clone-repo-sam.png){width="90%" fig-align="center"}
+<!-- ![](images/github_introduction/rstudio-clone-repo.png){width="90%" fig-align="center"} -->
+![](images/github_introduction/rstudio-clone-repo-sam.png){width="90%" fig-align="center"}
 :::
 
 Once you click **Create Project**, a new RStudio window will open with all of the files from the remote repository copied locally. Depending on how your version of RStudio is configured, the location and size of the panes may differ, but they should all be present -- you should see a **Git** tab, as well as the **Files** tab, where you can view all of the files copied from the remote repo to this local repo. 
 
 :::{.column-body-outset}
-<!-- ![](images/github-rstudio-test.png) -->
-![](images/github-rstudio-test-sam.png)
+<!-- ![](images/github_introduction/github-rstudio-test.png) -->
+![](images/github_introduction/github-rstudio-test-sam.png)
 :::
 
 You'll note that there is one new file `sam_test.Rproj`, and three files that we created earlier on GitHub (`.gitignore`, `LICENSE`, and `README.md`).
@@ -396,8 +396,8 @@ In the **Git** tab, you'll note that the one new file, `sam_test.Rproj`, is list
 
 Inspect the history. Click on the **History** button in the **Git** tab to show the log of changes that have occurred -- these changes will be identical to what we viewed on GitHub. By clicking on each row of the history, you can see exactly what was added and changed in each of the two commits in this repository.
 
-<!-- ![](images/rstudio-history-1.png) -->
-![](images/rstudio-history-1-sam.png)
+<!-- ![](images/github_introduction/rstudio-history-1.png) -->
+![](images/github_introduction/rstudio-history-1-sam.png)
 
 ::: callout-note
 ## Challenge
@@ -408,19 +408,19 @@ Inspect the history. Click on the **History** button in the **Git** tab to show 
 
 Once you save, you'll immediately see the `README.md` file show up in the **Git** tab, marked as a modification. Select the file in the **Git** tab, and click **Diff** to see the changes that you saved (but which are not yet committed to your local repository). Newly made changes are highlighted in green.
 
-<!-- ![](images/rstudio-status-pane.png) -->
-![](images/rstudio-status-pane-sam.png)
+<!-- ![](images/github_introduction/rstudio-status-pane.png) -->
+![](images/github_introduction/rstudio-status-pane-sam.png)
 
 <!-- And here's what the newly made changes look like compared to the original file. New lines are highlighted in green, while removed lines are in red. -->
 
-<!-- ![](images/rstudio-diff.png) -->
+<!-- ![](images/github_introduction/rstudio-diff.png) -->
 
 **Commit the changes.** To commit the changes you made to the `README.md` file using RStudio's GUI (Graphical User Interface), rather than the command line:
 
 1. **Stage** (aka add) `README.md` by clicking the check box next to the file name -- this tells Git which changes you want included in the commit and *is analogous to using the git command, `git add README.md`, in the command line*
 2. **Commit** `README.md` by clicking the **Commit** button and providing a descriptive commit message in the dialog box. Press the **Commit** button once you're satisfied with your message. *This is analogous to using the git command, `git commit -m "my commit message"`, in the command line*.
 
-![](images/rstudio-commit-1.png)
+![](images/github_introduction/rstudio-commit-1.png)
 
 A few notes about our local repository's state:
 
@@ -429,7 +429,7 @@ A few notes about our local repository's state:
 
 **Commit the remaining project file** by staging/adding and committing it with an informative commit message.
 
-![](images/rstudio-commit-2.png)
+![](images/github_introduction/rstudio-commit-2.png)
 
 When finished, you'll see that no changes remain in the **Git** tab, and the repository is clean.
 
@@ -452,15 +452,15 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 :::
 
 :::{.column-body-outset}
-![](images/rstudio-history-3.png)
-<--![](images/rstudio-history-3-sam.png)-->
+![](images/github_introduction/rstudio-history-3.png)
+<--![](images/github_introduction/rstudio-history-3-sam.png)-->
 :::
 
 If you look at the History pane again, you'll notice that the labels next to the most recent commit indicate that both the local repository (`HEAD`) and the remote repository (`origin/HEAD`) are pointing at the same version in the history. If we look at the commit history on GitHub, all the commits will be shown there as well.
 
 <!-- :::{.column-page} -->
 
-![](images/github-history.png)
+![](images/github_introduction/github-history.png)
 
 ### Defining Merge Method
 
@@ -511,7 +511,7 @@ install.packages("usethis")
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/use_git.png")
+knitr::include_graphics("images/github_introduction/use_git.png")
 ```
 
 ::: {.callout-note}
@@ -548,7 +548,7 @@ If this file is currently untracked by Git, it should appear in my **Git** tab. 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/use_github.png")
+knitr::include_graphics("images/github_introduction/use_github.png")
 ```
 
 3. **Ensure that your default branch is named `main` rather than `master`** by:
@@ -606,7 +606,7 @@ Once complete, you should see the **Git** tab appear in your top left pane in RS
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/use_git.png")
+knitr::include_graphics("images/github_introduction/use_git.png")
 ```
 
 ::: {.callout-note}
@@ -670,7 +670,7 @@ There is a push across platforms and software to update this historical default 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/git_status_unstaged.png")
+knitr::include_graphics("images/github_introduction/git_status_unstaged.png")
 ```
 
 Run `git add .` in the Terminal to stage all files at once (or `git add {FILENAME}` to stage individual files). Running `git status` again will show you which files have been staged (in green). You may have to refresh your **Git** tab to see the change in state reflected in the GUI.
@@ -680,7 +680,7 @@ Run `git add .` in the Terminal to stage all files at once (or `git add {FILENAM
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/git_status_staged.png")
+knitr::include_graphics("images/github_introduction/git_status_staged.png")
 ```
 
 4. **Commit your files** by running `git commit -m "an informative commit message"` in the Terminal. Refreshing your **Git** tab will cause them to disappear (just as they do when you commit using RStudio's GUI buttons). You can run `git log` in the Terminal to see a history of your past commits (currently, we only have this one).
@@ -690,7 +690,7 @@ knitr::include_graphics("images/git_status_staged.png")
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("images/git_commit.png")
+knitr::include_graphics("images/github_introduction/git_commit.png")
 ```
 
 5. **Create an empty remote repository** by logging into [GitHub](https://github.com/) and creating a new repository, following the same steps as in Exercise 1. **IMPORTANTLY,** *DO NOT* initialize your remote repo with a `README` license, or `.gitignore` file -- doing so now can lead to merge conflicts. We can add them after our local and remote repos are linked. **Name your remote repository the same as your local repository (i.e. `training_{USERNAME}`).**
@@ -703,7 +703,7 @@ knitr::include_graphics("images/git_commit.png")
 #| fig-align: "center"
 #| out-width: "100%"
 
-knitr::include_graphics("images/setup-empty-repo.png")
+knitr::include_graphics("images/github_introduction/setup-empty-repo.png")
 ```
 
 These commands do three things:

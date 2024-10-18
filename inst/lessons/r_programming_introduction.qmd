@@ -12,7 +12,7 @@ This lesson is a combination of excellent lessons by others. Huge thanks to [Jul
 
 ## Welcome to R Programming
 
-![Artwork by Allison Horst](images/allison-horst-code-kitchen.png)
+![Artwork by Allison Horst](images/r_programming_introduction.qmd/allison-horst-code-kitchen.png)
 
 There is a vibrant community out there that is collectively developing increasingly easy to use and powerful open source programming tools. The changing landscape of programming is making learning how to code easier than it ever has been. Incorporating programming into analysis workflows not only makes science more efficient, but also more computationally reproducible. In this course, we will use the programming language R, and the accompanying integrated development environment (IDE) RStudio. R is a great language to learn for data-oriented programming because it is widely adopted, user-friendly, and (most importantly) open source!
 
@@ -28,7 +28,7 @@ While language is a familiar concept, programming languages are in a different c
 
 Let's take a tour of the RStudio interface.
 
-![](images/RStudio_IDE.png)
+![](images/r_programming_introduction.qmd/RStudio_IDE.png)
 
 Notice the default panes:
 
@@ -49,7 +49,7 @@ You can change the default location of the panes, among many other things, see [
 
 If you've just opened RStudio for the first time, you'll be in your Home directory. This is noted by the `~/` at the top of the console. You can see too that the Files pane in the lower right shows what is in the Home directory where you are. You can navigate around within that Files pane and explore, but note that you won't change where you are: even as you click through you'll still be Home: `~/`.
 
-![](images/RStudio_IDE_homedir.png){width="80%" fig-align="center"}
+![](images/r_programming_introduction.qmd/RStudio_IDE_homedir.png){width="80%" fig-align="center"}
 :::
 
 We can run code in a couple of places in RStudio, including the Console, let's start there.
@@ -527,16 +527,16 @@ There is an implicit contract with the computer/scripting language: Computer wil
 Remember that this is a language, not dissimilar to English! There are times you aren't understood -- it's going to happen. There are different ways this can happen. Sometimes you'll get an error. This is like someone saying 'What?' or 'Pardon'? Error messages can also be more useful, like when they say 'I didn't understand this specific part of what you said, I was expecting something else'. That is a great type of error message. Error messages are your friend. Google them (copy-and-paste!) to figure out what they mean. Note that knowing how to Google is a skill and takes practice - use our [Masters of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) (MEDS) program workshop [Teach Me How to Google](https://ucsb-meds.github.io/teach-me-how-to-google/#1) as a guide.
 
 ::: {layout-ncol=2}
-![](images/practicalDev_googleErrorMessage.jpg){width="30%"}
+![](images/r_programming_introduction.qmd/practicalDev_googleErrorMessage.jpg){width="30%"}
 
-[![](images/meds-teach-me-how-to-google-cover.png){width="50%"}](https://github.com/UCSB-MEDS/teach-me-how-to-google)
+[![](images/r_programming_introduction.qmd/meds-teach-me-how-to-google-cover.png){width="50%"}](https://github.com/UCSB-MEDS/teach-me-how-to-google)
 :::
 
 And also know that there are errors that can creep in more subtly, without an error message right away, when you are giving information that is understood, but not in the way you meant. Like if I'm telling a story about tables and you're picturing where you eat breakfast and I'm talking about data. This can leave me thinking I've gotten something across that the listener (or R) interpreted very differently. And as I continue telling my story you get more and more confused... So write clean code and check your work as you go to minimize these circumstances!
 
 ## R Packages
 
-![Artwork by Allison Horst](images/allison-horst-r-doorway.png){width="80%" fig-align="center"}
+![Artwork by Allison Horst](images/r_programming_introduction.qmd/allison-horst-r-doorway.png){width="80%" fig-align="center"}
 
 R packages are the building blocks of computational reproducibility in R. Each package contains a set of related functions that enable you to more easily do a task or set of tasks in R. There are thousands of community-maintained packages out there for just about every imaginable use of R - including many that you have probably never thought of!
 
@@ -580,7 +580,7 @@ To install a package, we use the syntax `install.packages("packge_name")`. A pac
 
 Take a look at the objects in your Environment (Workspace) in the upper right pane. The Workspace is where user-defined objects accumulate. There are a few useful commands for getting information about your Environment, which make it easier for you to reference your objects when your Environment gets filled with many, many objects.
 
-![](images/RStudio_IDE_env.png)
+![](images/r_programming_introduction.qmd/RStudio_IDE_env.png)
 
 You can get a listing of these objects with a couple of different R functions:
 
@@ -609,7 +609,7 @@ It's good practice to clear your environment. Over time your Global Environmenta
 
 ## Save Workspace Image to .RData?
 
-![](images/save-workspace.png)
+![](images/r_programming_introduction.qmd/save-workspace.png)
 
 **DON'T SAVE**
 
@@ -620,7 +620,7 @@ RStudio by default wants to save the state of your environment (the objects you 
 
 You can change the Global Options configuration for the default to be NEVER SAVE MY WORKSPACE. Go to Tools > Global Options. Under the General menu, select Never next to "Save workspace to .RData on exit". This way you won't get asked every time you close a project, instead RStudio knows not to save.
 
-![](images/save-workspace-global-options.png)
+![](images/r_programming_introduction.qmd/save-workspace-global-options.png)
 
 
 ## Logical operators and expressions

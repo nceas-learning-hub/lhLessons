@@ -41,16 +41,16 @@ Literate analysis help reduce the mistakes from copying and pasting across softw
 
 You can identify a Quarto file with the `.qmd` extension. On the other hand, an RMarkdown file has a `.Rmd` extension. Both have similar structures and both combine prose with code.Quarto provides a rich support to languages other than R such as Python, Observable, and Julia. It also excels in formatting and layout. Allowing users to customize in details the looks of the rendered documents. On the other hand, RMarkdown is compatible with some languages that Quarto is not, for example bash. Quarto and Rmarkdown are amazing tools to use for collaborative research. During this course e will spend some time learning and using the basics of Quarto and provide some comparisons to RMarkdown.
 
-![](images/quarto-rmd-logo.png){fig-alt="Bui & Csik, 2023, SORTEE"}
+![](images/r_quarto_literate_analysis/quarto-rmd-logo.png){fig-alt="Bui & Csik, 2023, SORTEE"}
 
 Now, let's take a look at the structure of each of these files. The both look for the most part the same with minor differences.
 
 ::: column-page
-![](images/quarto-rmd-structure.png){fig-alt="Bui & Csik, 2023, SORTEE"}
+![](images/r_quarto_literate_analysis/quarto-rmd-structure.png){fig-alt="Bui & Csik, 2023, SORTEE"}
 
 Finally, lets compare each of these files when knitted/rendered.
 
-![](images/quarto-rmd-rendered.png){fig-alt="Bui & Csik, 2023, SORTEE"}
+![](images/r_quarto_literate_analysis/quarto-rmd-rendered.png){fig-alt="Bui & Csik, 2023, SORTEE"}
 :::
 
 Again, we see similar outcomes, with minor differences mainly in formatting (font, style of showing code chunks, etc.)
@@ -98,7 +98,7 @@ Let's have a look at this file --- As we saw in the examples above, it looks a l
 Let's go ahead and render this file by clicking the "Render" button, next to the blue arrow at the top of the Quarto file. When you first click this button, RStudio will prompt you to save this file. Save it in into your `scripts` folder, and name it something that you will remember (like `quarto-intro.Rmd`).
 
 ::: column-page
-![](images/quarto-side-by-side.png)
+![](images/r_quarto_literate_analysis/quarto-side-by-side.png)
 :::
 
 What do you notice between the two?
@@ -126,11 +126,11 @@ One important difference between Quarto documents and RMarkdown documents is tha
 
 #### Quarto code options syntax {.unnumbered}
 
-![](images/quarto-code-options.png){width="60%"}
+![](images/r_quarto_literate_analysis/quarto-code-options.png){width="60%"}
 
 #### RMarkdown code options syntax {.unnumbered}
 
-![](images/rmd-code-options.png){width="60%"}
+![](images/r_quarto_literate_analysis/rmd-code-options.png){width="60%"}
 :::
 
 It is important to emphasize one more time that in an Quarto (and RMarkdown) document, the gray areas of the document are *code*, in this case R code because that is what it is indicated in the \`\`\``{r}` syntax at the start of this gray area. And the white areas of a qmd are in markdown language.
@@ -152,7 +152,7 @@ There are some good [cheatsheets](https://github.com/adam-p/markdown-here/wiki/M
 -   In an R script or inside an R code chunk, a hash indicates a comment that will not be evaluated. You can use as many as you want: `#` is equivalent to `######`. It's just a matter of style.
 -   In markdown, a hash indicates a level of a header. And the number you use matters: `#` is a "level one header", meaning the biggest font and the top of the hierarchy. `###` is a level three header, and will show up nested below the `#` and `##` headers.
 
-![](images/rmarkdown_headers.png)
+![](images/r_quarto_literate_analysis/rmarkdown_headers.png)
 :::
 
 ::: callout-note
@@ -172,7 +172,7 @@ To access the editor, click the Visual button in the upper left hand corner of y
 
 To add a citation, go to the visual editor and in the insert drop down, select "Citation." In the window that appears, there are several options in the left hand panel for the source of your citation. If you have a citation manager, such as Zotero, installed, this would be included in that list. For now, select "From DOI", and in the search bar enter a DOI of your choice (e.g.: 10.1038/s41467-020-17726-z), then select "Insert."
 
-![](images/markdown-citation.png)
+![](images/r_quarto_literate_analysis/markdown-citation.png)
 
 After selecting insert, a couple of things happen. First, the citation reference is inserted into your markdown text as `[@oke2020]`. Second, a file called references.bib containing the BibTex format of the citation is created. Third, that file is added to the YAML header of your Quarto document (`bibliography: references.bib`). Adding another citation will automatically update your `references.bib` file. So easy!
 

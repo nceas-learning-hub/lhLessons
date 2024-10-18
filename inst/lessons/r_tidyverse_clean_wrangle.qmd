@@ -488,7 +488,7 @@ Think about how we would calculate the average catch per region "by hand". It wo
 3. Then we combine the values for average catch per region into a single table. 
 
 :::{.column-body-outset}
-![](images/regions-split-apply-combine.png){ fig-align="center"}
+![](images/r_tidyverse_clean_wrangle/regions-split-apply-combine.png){ fig-align="center"}
 :::
 
 Analyses like this conform to what is known as the **Split-Apply-Combine strategy**. This strategy follows the three steps we explained above:

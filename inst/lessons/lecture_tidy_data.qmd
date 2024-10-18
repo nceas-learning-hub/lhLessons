@@ -63,13 +63,13 @@ First, let's get acquainted with our building blocks.
 
 The following is an example of tidy data - it's easy to see the three tidy data principles apply.
 
-![](images/tidy_data.png)
+![](images/lecture_tidy_datatidy_data.png)
 
-![](images/tidy_variables.png)
+![](images/lecture_tidy_datatidy_variables.png)
 
-![](images/tidy_observations.png)
+![](images/lecture_tidy_datatidy_observations.png)
 
-![](images/tidy_values.png)
+![](images/lecture_tidy_datatidy_values.png)
 
 ## Recognizing untidy data
 
@@ -84,14 +84,14 @@ The following is a screenshot of an actual dataset that came across NCEAS.
 We have all seen spreadsheets that look like this - and it is fairly obvious that whatever this is, it isn't very tidy.
 Let's dive deeper into why we consider it untidy data.
 
-![](images/excel-org-01.png)
+![](images/lecture_tidy_dataexcel-org-01.png)
 
 #### Multiple tables
 
 To begin with, notice there are actually three smaller tables within this table.
 Although for our human brain it is easy to see and interpret this, it is extremely difficult to get a computer to see it this way.
 
-![](images/excel-org-02.png)
+![](images/lecture_tidy_dataexcel-org-02.png)
 
 Having multiple tables within the same table will create headaches down the road should you try to read in this information using R or another programming language.
 **Having multiple tables immediately breaks the tidy data principles**, as we will see next.
@@ -102,14 +102,14 @@ In tidy data, **each column corresponds to a single variable**.
 If you look down a column, and see that multiple variables exist in the table, the data is not tidy.
 A good test for this can be to see if you think the column consists of only one unit type.
 
-![](images/excel-org-04.png)
+![](images/lecture_tidy_dataexcel-org-04.png)
 
 #### Inconsistent rows
 
 The second principle of tidy data is: **every column must be a single observation**.
 If you look across a single row, and you notice that there are clearly multiple observations in one row, the data are likely not tidy.
 
-![](images/excel-org-03.png)
+![](images/lecture_tidy_dataexcel-org-03.png)
 
 #### Marginal sums and statistics
 
@@ -117,7 +117,7 @@ If you look across a single row, and you notice that there are clearly multiple 
 They break principle one, "Every column is a variable", because a marginal statistic does not represent the same variable as the values it is summarizing.
 They also break principle two, "Every row is an observation", because they represent a combination of observations, rather than a single one.
 
-![](images/excel-org-05.png)
+![](images/lecture_tidy_dataexcel-org-05.png)
 
 ### Example 2
 
@@ -135,7 +135,7 @@ The column headers refer to the following:
 
 Take a moment to see why this is not tidy data.
 
-![](images/untidy_1.png)
+![](images/lecture_tidy_datauntidy_1.png)
 
 #### Multiple Observations
 
@@ -144,14 +144,14 @@ Remember that an observation is all the values measured for an individual **enti
 If our entity is a single observed plant, then the values we measured are date and site of observation, the altitude, and the species code and height.
 This table breaks the second tidy data principles: Every row is an observation.
 
-![](images/untidy_2.png)
+![](images/lecture_tidy_datauntidy_2.png)
 
 People often refer to this as "*wide* format", because the observations are spread across a wide number of columns.
 Note that, should one encounter a new species in the survey, we would have to add new columns to the table.
 This is difficult to analyze, understand, and maintain.
 To solve this problem, we can create a single column for species code and a single column for species height as in the following table.
 
-![](images/tidy_not_normal.png)
+![](images/lecture_tidy_datatidy_not_normal.png)
 
 ## Why Tidy Data?
 
@@ -181,14 +181,14 @@ A good indication that a data table is denormalized and needs normalization is s
 
 In the previous data table the row values for the last three columns are repeated.
 
-![](images/denormalized.png)
+![](images/lecture_tidy_datadenormalized.png)
 
 This means the data is denormalized and it happens because each row has values about more than one entity:
 
 -   1st entity: individual plants found at that site, and
 -   2nd entity: sites at which the plants were observed.
 
-![](images/two_entities.png)
+![](images/lecture_tidy_datatwo_entities.png)
 
 If we use this information to normalize our data, we should end up with:
 
@@ -197,7 +197,7 @@ If we use this information to normalize our data, we should end up with:
 
 Here's how our normalized data would look like:
 
-![](images/normalized.png){fig-align="center" width="70%"}
+![](images/lecture_tidy_datanormalized.png){fig-align="center" width="70%"}
 
 Notice that each table also satisfies the tidy data principles.
 
@@ -264,7 +264,7 @@ The 'site' column is the *primary key* of that table because it uniquely identif
 In the first table, however, the 'site' column is a *foreign key* that references the primary key from the second table.
 This linkage tells us that the first height measurement for the DAPU observation occurred at the site with the name Taku.
 
-![](images/primary_foreign_keys.png){fig-align="center" width="70%"}
+![](images/lecture_tidy_dataprimary_foreign_keys.png){fig-align="center" width="70%"}
 
 ### Compound keys
 
@@ -278,7 +278,7 @@ In the sites data table from the previous example, we noticed that ‘site’ an
 
 A surrogate key is often simpler, and can be a better choice than a natural key to become the primary key of a data table.
 
-![](images/surrogate_natural_keys.png){fig-align="center" width=70%} -->
+![](images/lecture_tidy_datasurrogate_natural_keys.png){fig-align="center" width=70%} -->
 ```
 <!--Finally,-->
 
@@ -291,7 +291,7 @@ For example, the 'site' and 'sp_code' columns in the plants table cannot be keys
 However, when we look at their combined values (1-DAPU, 1-DAMA, 2-DAMA, 2-DAPU) we see each row has a unique value.
 So 'site' and 'sp_code' together form a compound key.
 
-![](images/compound_key.png)
+![](images/lecture_tidy_datacompound_key.png)
 
 There are also other types of keys, like a natural key or a surrogate key.
 Each type of key has advantages and disadvantages.
@@ -305,38 +305,38 @@ Regardless of the join we will perform, we need to start by identifying the prim
 
 When conceptualizing merges, one can think of two tables, one on the *left* and one on the *right*.
 
-![](images/join-diagrams-separate.png)
+![](images/lecture_tidy_datajoin-diagrams-separate.png)
 
 ### Inner Join
 
 An *INNER JOIN* is when you merge the subset of rows that have matches in both the left table and the right table.
 
-![](images/join-diagrams-inner.png)
+![](images/lecture_tidy_datajoin-diagrams-inner.png)
 
 ### Left Join
 
 A *LEFT JOIN* takes all of the rows from the left table, and merges on the data from matching rows in the right table.
 Keys that don't match from the left table are still provided with a missing value (na) from the right table.
 
-![](images/join-diagrams-left.png)
+![](images/lecture_tidy_datajoin-diagrams-left.png)
 
 ### Right Join
 
 A *RIGHT JOIN* is the same as a left join, except that all of the rows from the right table are included with matching data from the left, or a missing value.
 Notice that left and right joins can ultimately be the same depending on the positions of the tables
 
-![](images/join-diagrams-right.png)
+![](images/lecture_tidy_datajoin-diagrams-right.png)
 
 ### Full Outer Join
 
 Finally, a *FULL OUTER JOIN* includes all data from all rows in both tables, and includes missing values wherever necessary.
 
-![](images/join-diagrams-full.png)
+![](images/lecture_tidy_datajoin-diagrams-full.png)
 
 Sometimes people represent joins as Venn diagrams, showing which parts of the left and right tables are included in the results for each join.
 This representation is useful, however, they miss part of the story related to where the missing value comes from in each result.
 
-![Image source: R for Data Science, Wickham & Grolemund.](images/join-venn.png)
+![Image source: R for Data Science, Wickham & Grolemund.](images/lecture_tidy_datajoin-venn.png)
 
 We suggest reading<a href=https://r4ds.had.co.nz/relational-data.html#join-problems target="_blank"> the Relational Data chapter in the "R for Data Science" book </a> for more examples and best practices about joins.
 
@@ -349,7 +349,7 @@ We will explain the steps to drawing a simplified E-R model with our previous pl
 
 *Step 1: Identify the entities in the relational database and add each one in a box.* In our case, entities are \[plants\] and \[sites\], since we are gathering observations about both of these.
 
-![](images/ER_diagram_1.png){fig-align="center" width="50%"}
+![](images/lecture_tidy_dataER_diagram_1.png){fig-align="center" width="50%"}
 
 *Step 2: Add variables for each entity and identify keys.* Add the variables as a list inside each box.
 Then, identify the primary and foreign keys in each of the boxes.
@@ -358,7 +358,7 @@ To visualize this, we have indicated
 -   the <font color="red"> primary key </font> (of each entity) in <font color="red"> red </font> and
 -   any <font color="blue"> foreign keys </font> in <font color="blue"> blue </font>.
 
-![](images/ER_diagram_2.png){fig-align="center" width="50%"}
+![](images/lecture_tidy_dataER_diagram_2.png){fig-align="center" width="50%"}
 
 *Step 3: Add relationships between entities.*
 
@@ -373,19 +373,19 @@ To visualize this, we have indicated
     So, for example, we need to describe how \[plants\] is related to \[sites\].
     The relation is "a plant is located in a site", so we write "located" above the line indicating the relationship between \[plants\] and \[sites\].
 
-![](images/ER_diagram_3.png){fig-align="center" width="50%"}
+![](images/lecture_tidy_dataER_diagram_3.png){fig-align="center" width="50%"}
 
 *Step 4: Add cardinality to every relationship in the diagram.* At this step we want to quantify how many items in an entity are related to another entity.
 This is easiest if we reuse the description we found in the previous step.
 For example, "a plant is located in one site".
 Then we add the symbol for "one" at the end of the line going from \[plants\] to \[sites\].
 
-![](images/ER_diagram_4.png){fig-align="center" width="50%"}
+![](images/lecture_tidy_dataER_diagram_4.png){fig-align="center" width="50%"}
 
 To finish, we also indicate how many plants are related to a single site.
 Since "a site has many plants", we add the symbol for "many" at the end of the line going from \[sites\] to \[plants\]
 
-![](images/ER_diagram_5.png){fig-align="center" width="50%"}
+![](images/lecture_tidy_dataER_diagram_5.png){fig-align="center" width="50%"}
 
 That's it!
 
@@ -394,7 +394,7 @@ That's it!
 The symbols we used at the end of the lines are called **ERD "crow's foot"**.
 You can see all the existing ones together with an example in the next diagram.
 
-![](images/ERD_Relationship_Symbols_Quick_Reference.png)
+![](images/lecture_tidy_dataERD_Relationship_Symbols_Quick_Reference.png)
 
 ::: callout-note
 If you need to produce a publishable E-R model such as the one above, <a href=https://mermaid.js.org/intro/ target="_blank"> Mermaid </a> is a great option.
