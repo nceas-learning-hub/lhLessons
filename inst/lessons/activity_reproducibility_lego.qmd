@@ -1,6 +1,7 @@
 ---
 title: "Reproducibility: a Lego Activity"
 format: html
+editor: source
 ---
 
 ## Reproducibility activity using LEGO®

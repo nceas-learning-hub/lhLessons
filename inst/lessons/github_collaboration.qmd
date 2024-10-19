@@ -1,7 +1,10 @@
-## Learning Objectives {.unnumbered}
 ---
 title: Collaborating with Git and GitHub
+format: html
+editor: source
 ---
+
+## Learning Objectives {.unnumbered}
 
 - Apply the principles, features, and collaboration tools of Git and GitHub to effectively collaborate with colleagues on code
 - Analyze and evaluate common causes of conflicts that arise when collaborating on repositories 

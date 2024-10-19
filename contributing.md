@@ -1,4 +1,4 @@
-# Contributing to coreR
+# Contributing to coreRlessons
 
 :tada: First off, thanks for contributing! :tada:
 

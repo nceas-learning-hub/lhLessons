@@ -1,6 +1,7 @@
 ---
 title: Working in R & RStudio
-
+format: html
+editor: source
 ---
 
 ## Learning Objectives {.unnumbered}

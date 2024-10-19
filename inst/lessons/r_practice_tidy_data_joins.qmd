@@ -1,5 +1,7 @@
 ---
 title: "Practice Session: Joins"
+format: html
+editor: source
 bibliography: book.bib
 ---
 
