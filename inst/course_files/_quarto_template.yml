@@ -37,7 +37,10 @@ format:
   html:
     theme: cosmo
     css: style.css
-    # Note HD: latex rendering issues, maybe with column-margin
+    title-block-banner: "#0b5f4acc" ### doesn't exactly match header color in style.css...?
+    title-block-banner-color: "white"
+    ### add css to tighten the margins? add an NCEAS or LH logo in the header?
+  # Note HD: latex rendering issues, maybe with column-margin
   # pdf:
   #   documentclass: scrreprt
 

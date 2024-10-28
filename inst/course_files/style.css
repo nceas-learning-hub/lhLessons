@@ -1,3 +1,18 @@
+/* NCEAS Learning Hub site uses Avenir... some free options on Google Fonts:
+   Sen, Figtree, Manrope, Montserrat
+*/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+  font-family: Figtree, serif;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: Figtree, serif;
+  font-weight: 700;
+}
+
 p.caption {
   color: #777;
   margin-top: 10px;
