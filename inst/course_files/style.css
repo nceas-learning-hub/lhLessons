@@ -3,6 +3,20 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+.quarto-title-block .quarto-title-banner {
+  /* multiple background images - first (NCEAS logo) on top, then hex, then
+     linear gradient underneath - separated by commas */
+  background-image: url(logo-nceas.svg),
+                    url(logo-lh-hex.png),
+                    linear-gradient(to top right, #5C9341, #167B62, #0C4537, black);
+  /* Then the options apply to each image in turn.  The last (100% 200px) sets
+     both the width (100%) and height (200px) of the gradient to fit the block */
+  background-size: 100px, 130px, 100% 200px;
+  background-position: 10%, 90%, left;
+  background-repeat: no-repeat, no-repeat;
+  background-origin: content-box;
+}
+
 body {
   font-family: Figtree, serif;
   font-weight: 400;
@@ -11,6 +25,7 @@ body {
 h1, h2, h3 {
   font-family: Figtree, serif;
   font-weight: 700;
+  color: #167b62;
 }
 
 p.caption {

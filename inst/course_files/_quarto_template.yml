@@ -11,7 +11,7 @@ book:
   # cover-image: cover.png
   # cover-image-alt: "Learning Hub logo in the shape of a hexagon with a bee in the center"
 
-  favicon: cover.png # learning hub logo
+  # favicon: cover.png # learning hub logo
 
   sidebar:
     title: "Training Materials"
@@ -29,6 +29,12 @@ book:
     - index.qmd # preface
     SESSION_LINKS
 
+  page-footer:
+    center: "Copyright \u00a9 2024, NCEAS"
+    ### NCEAS main website footer:
+    # center: "\u00a9 The Regents of the University of California, All Rights Reserved"
+    # could also include license info?
+    background: secondary
 
 
 bibliography: book.bib
@@ -37,7 +43,8 @@ format:
   html:
     theme: cosmo
     css: style.css
-    title-block-banner: "#0b5f4acc" ### doesn't exactly match header color in style.css...?
+    # title-block-banner: "title-block-stripe.png"
+    # title-block-banner: "#0b5f4acc" ### doesn't exactly match header color in style.css...?
     title-block-banner-color: "white"
     ### add css to tighten the margins? add an NCEAS or LH logo in the header?
   # Note HD: latex rendering issues, maybe with column-margin
