@@ -3,6 +3,11 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+.quarto-title-block .title, .subtitle  {
+  /* in elements with quarto-title-block class, change color for classes title and subtitle */
+  color: white;
+}
+
 .quarto-title-block .quarto-title-banner {
   /* multiple background images - first (NCEAS logo) on top, then hex, then
      linear gradient underneath - separated by commas */
