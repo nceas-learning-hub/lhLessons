@@ -1,5 +1,5 @@
 ---
-title: Collaborating with Git and GitHub
+title: Collaborating with Git and GitHub UPDATED 11/7
 format: html
 editor: source
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Reproducibility: a Lego Activity"
+title: "Reproducibility: a Lego Activity UPDATED 11/7"
 format: html
 editor: source
 ---

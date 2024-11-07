@@ -1,5 +1,5 @@
 ---
-title: Literate Analysis with Quarto
+title: Literate Analysis with Quarto UPDATED 11/7
 format: html
 editor: source
 ---
