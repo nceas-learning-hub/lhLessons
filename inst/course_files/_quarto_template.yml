@@ -1,13 +1,39 @@
 project:
-  type: book
+  type: website
   output-dir: docs
 
-book:
-  title: "COURSE_TITLE"
-  subtitle: "COURSE_DATES"
+filters:
+- courseformat ### for custom callouts
+editor: source
+bibliography: book.bib
+
+format:
+  html:
+    theme: ### can only point to scss, not css
+      - cosmo
+      - lh-style2.scss ### seems easier than css?
+    css: lh-style.css   ### doesn't render NCEAS logo if put in scss file?
+    toc: true
+    number-sections: true
+    title-block-banner: "blue" ### need something here to "turn on" the title-block-banner
+
+website:
+  title: "COURSE_TITLE (COURSE_DATES)"
   reader-mode: false
+  repo-url: COURSE_REPO
 
   favicon: logo-lh-hex.png # learning hub logo on browser tab
+
+  bread-crumbs: false ### NEW keep header clean
+  navbar: ### NEW inspired by Nick's site
+    right:
+      - text: "Instructors"
+        menu:
+          - text: "Casey O'Hara"
+            href: https://www.oharascience.com/
+      - icon: github
+        href: COURSE_REPO
+        aria-label: GitHub
 
   sidebar:
     title: "Training Materials"
@@ -21,7 +47,7 @@ book:
       - icon: github
         href: COURSE_URL
 
-  chapters:
+  contents:
     - index.qmd # preface
     SESSION_LINKS
 
@@ -33,13 +59,3 @@ book:
     background: "#0C4537"
 
 
-bibliography: book.bib
-
-format:
-  html:
-    theme: cosmo
-    css: style.css
-    title-block-banner: "blue" ### need to invoke this to "turn on" the title-block-banner
-    ### add css to tighten the margins? add an NCEAS or LH logo in the header?
-
-editor: source
