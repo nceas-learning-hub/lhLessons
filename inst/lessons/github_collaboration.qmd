@@ -1,7 +1,5 @@
 ---
-title: Collaborating with Git and GitHub UPDATED 11/7
-format: html
-editor: source
+title: Collaborating with Git and GitHub
 ---
 
 ## Learning Objectives {.unnumbered}

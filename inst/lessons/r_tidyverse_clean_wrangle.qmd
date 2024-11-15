@@ -1,7 +1,5 @@
 ---
-title: Cleaning and Wrangling Data UPDATED
-format: html
-editor: source
+title: Cleaning and Wrangling Data
 ---
 
 ## Learning Objectives {.unnumbered}

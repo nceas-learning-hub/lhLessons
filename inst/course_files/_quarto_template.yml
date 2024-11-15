@@ -46,10 +46,9 @@ website:
         href: https://twitter.com/ucsb_nceas
       - icon: github
         href: COURSE_URL
-
-  contents:
-    - index.qmd # preface
-    SESSION_LINKS
+    contents:
+      - index.qmd # preface
+      SESSION_LINKS
 
   page-footer:
     center: "Copyright \u00a9 2024, NCEAS"

@@ -1,16 +1,22 @@
 ---
-title: Working in R & RStudio VERSION 2
-format: html
-editor: source
+title: Working in R & RStudio
 ---
 
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 -   Get oriented with the RStudio interface
 -   Run code and basic arithmetic in the Console
 -   Practice writing code in an R Script
 -   Be introduced to built-in R functions
 -   Use the Help pages to look up function documentation
+:::
+
+[Full Screen](slides/r_programming_introduction/example_slides.html)
+
+```{=html}
+<iframe class="slide-deck" src="slides/r_programming_introduction/slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
 
 ::: Acknowledgements
 This lesson is a combination of excellent lessons by others. Huge thanks to [Julie Lowndes](https://jules32.github.io/) for writing most of this content and letting us build on her material, which in turn was built on [Jenny Bryan's](https://jennybryan.org/about/) materials. We highly recommend reading through the original lessons and using them as reference (see in the resources section below).
@@ -86,18 +92,23 @@ Let's say the value of 12 that we got from running `3*4` is a really important v
 
 We can assign a value of a mathematical operation (and more!) to an object in R using the assignment operator, `<-` (greater than sign and minus sign). All objects in R are created using the assignment operator, following this form: `object_name <- value`.
 
-::: callout-note
-#### Exercise: Create an object
+::: {.callout-exercise}
+
+**Create an object!**
 
 Assign `3*4` to an object called `important_value` and then inspect the object you just created.
-:::
 
+::: {.callout-answer}
 ```{r}
 # think of this code as someone saying "important_value gets 12".
 important_value <- 3*4
 ```
 
 Notice how after creating the object, R doesn't print anything. However, we know our code worked because we see the object, and the value we wanted to store is now visible in our **Global Environment**. We can force R to print the value of the object by calling the object name (aka typing it out) or by using parentheses.
+:::
+
+:::
+
 
 ::: {.callout-caution icon="false"}
 #### Quick Tip
@@ -172,16 +183,21 @@ weight_kg <- 25
 
 Now that R has `weight_kg` saved in the Global Environment, we can run calculations with it.
 
-::: callout-note
-#### Exercise: Using `weight_kg` run a simple calculation
+::: {.callout-exercise}
+
+**Using `weight_kg` run a simple calculation**
 
 Let's convert the weight into pounds. Weight in pounds is 2.2 times the weight in kg.
-:::
+
+::: {.callout-answer}
 
 ```{r}
 # converting weight from kilograms to pounds
 2.2 * weight_kg
 ```
+:::
+
+:::
 
 You can also store more than one value in a single object. Storing a series of weights in a single object is a convenient way to perform the same operation on multiple values at the same time. One way to create such an object is with the function `c()`, which stands for combine or concatenate.
 
@@ -364,23 +380,32 @@ Let's override our weight object with some new values, and this time we'll assig
 weight_lb <- c(55, 25, 12)
 ```
 
-::: callout-note
-#### Exercise: Use the `mean()` function to calculate the mean weight.
+::: {.callout-exercise}
+
+**Use the `mean()` function to calculate the mean weight.**
+
 From the its Help page, we learned this function will take the mean of a set of numbers. Very convenient! 
 
 We also learned that `mean()` only has one argument we need to supply a value to (`x`). The rest of the arguments have default values.
-:::
+
+::: {.callout-answer}
 
 ```{r}
-#| code-fold: true
-#| code-summary: "Code"
 mean(x = weight_lb)
 ```
-
-::: callout-note
-#### Exercise: Save the mean to an object called `mean_weight_lb`
-**Hint:** What operator do we use to save values to an object?
 :::
+
+:::
+
+::: {.callout-exercise}
+
+**Save the mean to an object called `mean_weight_lb`**
+
+::: {.callout-hint}
+What operator do we use to save values to an object?
+:::
+
+::: {.callout-answer}
 
 ```{r}
 #| code-fold: true
@@ -389,21 +414,28 @@ mean(x = weight_lb)
 # saving the mean using the assignment operator `<-`
 mean_weight_lb <- mean(x = weight_lb)
 ```
-
-::: callout-note
-#### Exercise: Update `weight_lb`
-Let's say each of the dogs gained 5 pounds and we need to update our vector, so let's change our object's value by assigning it new values.
+:::
 :::
 
+::: {.callout-exercise}
+**Update `weight_lb`**
+
+Let's say each of the dogs gained 5 pounds and we need to update our vector, so let's change our object's value by assigning it new values.
+
+
 ```{r}
-#| code-fold: true
-#| code-summary: "Code"
 weight_lb <- c(60, 30, 17)
 ```
 
 Call `mean_weight_lb` in the console or take a look at your Global Environment. Is that the value you expected? Why or why not?
 
+::: {.callout-answer}
+
 It wasn't the value we expected because `mean_weight_lb` did not change. This demonstrates an important R programming concept: **Assigning a value to one object does not change the values of other objects in R.**
+
+:::
+
+:::
 
 Now that we understand why the object's value hasn't changed - how do we update the value of `mean_weight_lb`? How is an R Script useful for this?
 

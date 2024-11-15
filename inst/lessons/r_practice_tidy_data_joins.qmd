@@ -1,8 +1,5 @@
 ---
-title: "Practice Session: Joins UPDATED 11/7"
-format: html
-editor: source
-bibliography: book.bib
+title: "Practice Session: Joins"
 ---
 
 ## Learning Objectives {.unnumbered}

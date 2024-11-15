@@ -1,15 +1,15 @@
 ---
-title: "Reproducibility: a Lego Activity UPDATED 11/7"
-format: html
-editor: source
+title: "Reproducibility: a Lego Activity"
 ---
 
 ## Reproducibility activity using LEGO®
 
-### Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 - Illustrate elements of good reproducibility through the medium of LEGO®
 - Discuss what is needed and what is not needed for good reproducibility
+:::
 
 ::: callout-note
 ## Acknowledgements

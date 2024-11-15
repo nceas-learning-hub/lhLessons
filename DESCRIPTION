@@ -2,7 +2,7 @@ Package: coreRlessons
 Type: Package
 Title: Lesson documents for use with the coreR package
 Version: 2024.11.07
-Author: Who wrote it
+Author: Casey O'Hara <ohara@nceas.ucsb.edu>
 Maintainer: Casey O'Hara <ohara@nceas.ucsb.edu>
 Description: This package contains all the lessons (as .qmd) and
     associated files (images, data, slides) for building a course
