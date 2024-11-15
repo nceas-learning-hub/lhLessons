@@ -2,11 +2,13 @@
 title: "Practice Session: Joins"
 ---
 
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 -   Practice joining tables together
 -   Practice identifying primary and foreign keys
 -   Practice using common cleaning and wrangling functions
+:::
 
 ::: callout-note
 ## Acknowledgements

@@ -2,11 +2,12 @@
 title: Cleaning and Wrangling Data
 ---
 
-## Learning Objectives {.unnumbered}
-
+:::{.callout-tip}
+## Learning Objectives
 - Introduce `dplyr` and `tidyr` functions to clean and wrangle data for analysis
 - Learn about the Split-Apply-Combine strategy and how it applies to data wrangling
 - Describe the difference between wide vs. long table formats and how to convert between them
+:::
 
 
 ## Introduction

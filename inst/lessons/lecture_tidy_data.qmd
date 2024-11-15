@@ -2,14 +2,15 @@
 title: Tidy Data
 ---
 
-## Learning Objectives {.unnumbered}
-
+:::{.callout-tip}
+## Learning Objectives
 Learn how to design and create effective data tables by:
 
 -   applying tidy and normalized data principles,
 -   following best practices to format data tables' content,
 -   relating tables following relational data models principles, and
 -   understanding how to perform table joins.
+:::
 
 
 ## What is tidy data?

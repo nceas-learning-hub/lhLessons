@@ -2,11 +2,13 @@
 title: Writing Functions
 ---
 
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 -   Explain the importance of using and developing functions
 -   Create custom functions using R code
 -   Document functions to improve understanding and code communication
+:::
 
 ## R Functions
 

@@ -2,13 +2,15 @@
 title: Creating R Packages
 ---
 
-```{=html}
-<!-- ## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 - The advantages of using R packages for organizing code
 - Simple techniques for creating R packages
-- Approaches to documenting code in packages-->
-```
+- Approaches to documenting code in packages
+:::
+
+
 ## R Packages
 
 Most R users are familiar with loading and utilizing packages in their work. And they know how rich CRAN is in providing for many conceivable needs. Most people have never created a package for their own work, and most think the process is too complicated. Really it's pretty straighforward and super useful in your personal work. Creating packages serves two main use cases:
