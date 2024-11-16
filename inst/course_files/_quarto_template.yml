@@ -3,29 +3,29 @@ project:
   output-dir: docs
 
 filters:
-- courseformat ### for custom callouts
+- nceas-learning-hub/lh_theme
 editor: source
 bibliography: book.bib
 
 format:
   html:
-    theme: ### can only point to scss, not css
-      - cosmo
-      - lh-style2.scss ### seems easier than css?
-    css: lh-style.css   ### doesn't render NCEAS logo if put in scss file?
+    theme:
+       light: _extensions/nceas-learning-hub/lh_theme/lh_light.scss
+       dark: _extensions/nceas-learning-hub/lh_theme/lh_dark.scss
+    css: _extensions/nceas-learning-hub/lh_theme/lh-style.css   ### doesn't render NCEAS logo if put in scss file?
     toc: true
     number-sections: true
-    title-block-banner: "blue" ### need something here to "turn on" the title-block-banner
+    title-block-banner: "blue" ### need this here to "turn on" the title-block-banner
 
 website:
   title: "COURSE_TITLE (COURSE_DATES)"
   reader-mode: false
   repo-url: COURSE_REPO
 
-  favicon: logo-lh-hex.png # learning hub logo on browser tab
+  favicon: _extensions/nceas-learning-hub/lh_theme/logo-lh-hex.png # learning hub logo on browser tab
 
-  bread-crumbs: false ### NEW keep header clean
-  navbar: ### NEW inspired by Nick's site
+  bread-crumbs: false
+  navbar:
     right:
       - text: "Instructors"
         menu:
@@ -55,6 +55,5 @@ website:
     ### NCEAS main website footer:
     # center: "\u00a9 The Regents of the University of California, All Rights Reserved"
     # could also include license info?
-    background: "#0C4537"
 
 

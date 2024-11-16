@@ -408,9 +408,6 @@ What operator do we use to save values to an object?
 ::: {.callout-answer}
 
 ```{r}
-#| code-fold: true
-#| code-summary: "Code"
-
 # saving the mean using the assignment operator `<-`
 mean_weight_lb <- mean(x = weight_lb)
 ```
@@ -431,7 +428,7 @@ Call `mean_weight_lb` in the console or take a look at your Global Environment. 
 
 ::: {.callout-answer}
 
-It wasn't the value we expected because `mean_weight_lb` did not change. This demonstrates an important R programming concept: **Assigning a value to one object does not change the values of other objects in R.**
+Perhaps you expected `mean_weight_lb` to change when you changed `weight_lb`?  It did not!  This demonstrates an important R programming concept: **Assigning a value to one object does not change the values of other objects in R.**
 
 :::
 
