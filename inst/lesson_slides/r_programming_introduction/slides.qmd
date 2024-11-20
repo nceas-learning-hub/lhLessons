@@ -6,7 +6,7 @@ format:
     highlight-style: a11y
     chalkboard: true
     theme:
-      - learning_hub_style.scss
+      - lh_slides_style.scss
 ---
 
 ## {#title-slide data-menu-title="Title Slide"} 
@@ -98,10 +98,7 @@ Let’s take a tour of the RStudio interface.
 Creating an object
 :::
 
-```{r}
-#| eval: false
-#| echo: true
-
+```r
 # think of this code as someone saying "important_value gets 12".
 important_value <- 3*4
 ```
