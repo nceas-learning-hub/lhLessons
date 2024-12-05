@@ -22,7 +22,7 @@ These exercises are adapted from Allison Horst's EDS 221: Scientific Programming
 
 These exercises will be using data on abundance, size, and trap counts (fishing pressure) of California spiny lobster (*Panulirus interruptus*) and were collected along the mainland coast of the Santa Barbara Channel by Santa Barbara Coastal LTER researchers [@lter2022].
 
-## Exercise: Collaborate on an analysis and create a report to publish using GitHub Pages
+Your task: Collaborate on an analysis and create a report to publish using GitHub Pages.
 
 ::: {.callout-tip}
 ### Setup
@@ -59,7 +59,7 @@ These exercises will be using data on abundance, size, and trap counts (fishing 
     d.  The Collaborator `pull`s the changes and data into their local repository (their workspace)
 :::
 
-### Explore, clean and wrangle data
+## Explore, clean and wrangle data
 
 For this portion of the exercise, the 
 - <u>Owner</u> will be working with the **lobster abundance and size data**
@@ -69,10 +69,10 @@ Questions 1-3 you will be working independently since you're working with differ
 
 ::: panel-tabset
 
-#### Owner
+### Owner
 
 ::: {.callout-tip}
-## Setup
+### Setup
 
 1.  Open the Quarto Document `owner-analysis.qmd`
     a.  Check the `YAML` and add your name to the `author` field
@@ -102,7 +102,7 @@ lobster_abundance <- read_csv(here::here("data/Lobster_Abundance_All_Years_20220
 
 :::
 
-## Convert missing values using `mutate()` and `na_if()`
+#### Convert missing values using `mutate()` and `na_if()`
 
 ::: {.callout-exercise}
 ### Question 1
@@ -119,7 +119,7 @@ lobster_abundance <- lobster_abundance %>%
 :::
 :::
 
-## `filter()` practice
+#### `filter()` practice
 
 ::: {.callout-exercise}
 ### Question 2
@@ -171,16 +171,16 @@ max_lobster <- lobster_abundance %>%
 
 ::: callout-important
 
-## Save your work and don't forget the Git and GitHub workflow!
+#### Save your work and don't forget the Git and GitHub workflow!
 After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
 :::
 
 
-#### Collaborator
+### Collaborator
 
 
 ::: callout-tip
-## Setup
+### Setup
 
 
 1.  Open the Quarto Document `collaborator-analysis.qmd`
@@ -209,7 +209,7 @@ lobster_traps <- read_csv(here::here("data/Lobster_Trap_Counts_All_Years_2021051
     
 :::
 
-## Convert missing values using `mutate()` and `na_if()`
+#### Convert missing values using `mutate()` and `na_if()`
 
 ::: {.callout-exercise}
 
@@ -227,7 +227,7 @@ lobster_traps <- lobster_traps %>%
 ::::
 :::
 
-## `filter()` practice
+#### `filter()` practice
 
 ::: {.callout-exercise}
 ### Question 2
@@ -275,20 +275,20 @@ max_lobster_traps <- lobster_traps %>%
 
 ::: callout-important
 
-## Save your work and Don't forget the Git and GitHub workflow!
+#### Save your work and Don't forget the Git and GitHub workflow!
 After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
 :::
 
 ::: 
 
-### Create visually appealing and informative data visualization
+## Create visually appealing and informative data visualization
 
 ::: panel-tabset
 
-#### Owner
+### Owner
 
 ::: callout-tip
-## Setup
+### Setup
 
 1. Stay in the Quarto Document `owner-analysis.qmd` and create a new section with a level 2 header and title it "Exercise: Data Visualization"
 
@@ -455,15 +455,15 @@ ggplot(data = lobster_size_lrg, aes(x = SITE, y = COUNT, fill = SIZE_BIN)) +
 :::
 
 ::: callout-important
-## Save your work and Don't forget the Git and GitHub workflow!
+### Save your work and Don't forget the Git and GitHub workflow!
 After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
 :::
 
 
-#### Collaborator
+### Collaborator
 
 ::: {.callout-tip}
-## Setup
+### Setup
 
 1. Stay in the Quarto Document `collaborator-analysis.qmd` and create a new section with a level 2 header and title it "Exercise: Data Visualization"
 
@@ -631,7 +631,7 @@ ggplot(data = lobster_traps_fishing_pressure, aes(x = SITE, y = COUNT, fill = FI
 :::
 
 ::: callout-important
-## Save your work and Don't forget the Git and GitHub workflow!
+### Save your work and Don't forget the Git and GitHub workflow!
 After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
 :::
 
@@ -639,12 +639,12 @@ After you've completed the exercises or reached a significant stopping point, us
 :::
 
 
-### Collaborate on a report and publish using GitHub pages
+## Collaborate on a report and publish using GitHub pages
 
 The final step! Time to work together again. Collaborate with your partner in `lobster-report.qmd` to create a report to publish to GitHub pages.
 
 ::: {.callout-note}
-## Code Review
+### Code Review
 As you're working on the `lobster-report.qmd` you will be conducting [two types of code reviews](https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Quality/Code_Review#:~:text=Code%20review%20practices%20fall%20into,review%20and%20lightweight%20code%20review): (1) pair programming and (2) lightweight code review.
 
 - **Pair programming** is where two people develop code together at the same workstation. One person is the "driver" and one person is the "navigator". The driver writes the code while the navigator observes the code being typed, points out any immediate quick fixes, and will also Google / troubleshoot if errors occur. Both the Owner and the Collaborator should experience both roles, so switch halfway through or at a meaningful stopping point.
