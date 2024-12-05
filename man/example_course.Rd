@@ -16,6 +16,7 @@ A data frame with 10 rows and 2 columns:
 example_course
 }
 \description{
-A subset of lessons ordered according to coreR October 2024 course
+A subset of lessons ordered according to coreR October 2024 course.  See also
+`default_course`
 }
 \keyword{datasets}

@@ -130,7 +130,7 @@ glimpse(ak_rgns_sf)
 
 Every `sf` object needs a coordinate reference system (or `crs`) defined in order to work with it correctly. A coordinate reference system contains both a datum and a projection. 
 
-![](images/geospatial-crs-diagram){width="50%" fig-align="center"}
+![](images/geospatial-crs-diagram.png){width="50%" fig-align="center"}
 
 The datum is how you georeference your points (in 3 dimensions!) onto a spheroid, or the Earth. The Earth is not a perfect sphere and there are many ways to describe its shape. For example, is the Earth shaped like a lemon, lime, or orange? The shape, or datum, that you choose will depend on the scope of your project (for instance, local vs. global) and the specific locations. 
 
