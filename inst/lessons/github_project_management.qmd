@@ -1,10 +1,14 @@
+---
+title: GitHub for Project Management
+---
 
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 - Utilize GitHub's project management tools to organize and manage projects
 - Practice creating issues in GitHub
 - Craft informative READMEs for Git repositories
-
+:::
 
 
 ## Slides {.unnumbered}
@@ -18,8 +22,8 @@
 Get back together with your partner that you collaborate for the Lobster Report.
 
 
-::: {.callout-note icon=false}
-### Question 1
+::: {.callout-exercise}
+### Step 1
 Owner creates a new Issue and tags collaborator.
 ::: 
 
@@ -34,8 +38,8 @@ Owner creates a new Issue and tags collaborator.
 
 </details> 
 
-::: {.callout-note icon=false}
-### Question 2
+::: {.callout-exercise}
+### Step 2
 Collaborator responds to Issue and creates a checklist
 ::: 
 
@@ -47,8 +51,8 @@ Collaborator responds to Issue and creates a checklist
 
 </details> 
 
-::: {.callout-note icon=false}
-### Question 3
+::: {.callout-exercise}
+### Step 3
 Collaborator create a GitHub Issues referencing code on one of the `.qmd` files
 ::: 
 
@@ -66,8 +70,8 @@ Collaborator create a GitHub Issues referencing code on one of the `.qmd` files
 </details> 
     
 
-::: {.callout-note icon=false}
-### Question 4
+::: {.callout-exercise}
+### Step 4
 Owner reacts to issue with an emoji and adds a label
 ::: 
 
@@ -82,12 +86,9 @@ Owner reacts to issue with an emoji and adds a label
 </details> 
 
 
-
-
-
 ## Exercise: Practice creating informative READMEs
 
-You can do this either for the training_username repo, or the Lobster Report repo (make sure just one of you edits this one) or edit a personal repo from one of your projects. Make sure to include the 6 core elements:
+You can do this either for the `training_<username>` repo, or the Lobster Report repo (make sure just one of you edits this one) or edit a personal repo from one of your projects. Make sure to include the 6 core elements:
 
 - [ ] A short, but descriptive title
 - [ ] A brief explanation of the repository’s purpose
@@ -96,7 +97,7 @@ You can do this either for the training_username repo, or the Lobster Report rep
 - [ ] A list of authors or contributors (for collaborative work)
 - [ ] References / acknowledgements
 
-::: {.callout-caution icon=false}
+::: {.callout-note}
 ### README Examples
 
 -  [A shiny dashboard for exploring my personal Strava data, by Sam Csik](https://github.com/samanthacsik/strava-dashboard?tab=readme-ov-file#a-shiny-dashboard-for-exploring-my-personal-strava-data)

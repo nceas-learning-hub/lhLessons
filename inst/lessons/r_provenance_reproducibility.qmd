@@ -1,21 +1,40 @@
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives 
 
+- Introduce the concept of reproducibility
+- Understand reproducibility best practices: File system structure, file organization, robust file paths
 - Discuss the concept of reproducible workflows including computational reproducibility and provenance metadata
 - Learn how to use R to package your work by building a reproducible paper in RMarkdown/Quarto
 - Introduce tools and techniques for reproducibility supported by the NCEAS and DataONE
 
-<!--
-:::callout-note
-[Download slides](files/repro-sci.pdf)
 :::
 
--->
+![By Allison Horst](images/reproducibility_alibi_horst.png)
 
-::: callout-tip
+<br>
+
+## Slides
+
+<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1Zgvx2YCf-HeqkSty-fdnyJnSV_jhYjWOw5bAIo4ioEs/preview"allowfullscreen></iframe>
+
+
+
+## More on Reproducible Workflows
+- [Best Practices for Writing Reproducible Code, University of Utrecht](https://utrechtuniversity.github.io/workshop-computational-reproducibility/)
+- [A Guide to Reproducible Code in Ecology and Evolution, British Ecological Society](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf)
+- [Reproducibility Lesson, LTER Synthesis Skills for Early Career Researchers](https://lter.github.io/ssecr/mod_reproducibility.html)
+- EDS 221 (2023), [Lesson 1](https://docs.google.com/presentation/d/e/2PACX-1vQ9-fDLw5exrrp6tteMXld4ds2aT8dze9XrzgEMuAwgMo-onIVO4lI_vIaE0xXIckacWB1fqXMOF3hl/pub?start=false&loop=false&delayms=3000&slide=id.p) and [Lesson 2](https://docs.google.com/presentation/d/e/2PACX-1vQ9-fDLw5exrrp6tteMXld4ds2aT8dze9XrzgEMuAwgMo-onIVO4lI_vIaE0xXIckacWB1fqXMOF3hl/pub?start=false&loop=false&delayms=3000&slide=id.ge50e8d8fef_0_373), UCSB MEDS, By Allison Horst
+- [GitHub Clinic, Openscapes](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit)
+- [Building reproducible analytical pipelines with R, Bruno Rodrigues](https://raps-with-r.dev/)
+
+
+
+
+::: {.callout-tip}
 In this lesson, we will be leveraging RMarkdown instead of Quarto so that we can use a very cool R package called `rticles`. Quarto has the same functionality as RMarkdown with `rticles` - making journal formatted articles from a code notebook - but it is done from the command line without additional R packages. See [the Quarto documentation](https://quarto.org/docs/journals/) for details
 :::
 
-### Reproducible Research: Recap 
+## Reproducible Research: Recap 
 
 Working in a reproducible manner:
 
@@ -44,7 +63,7 @@ A recent study of publicly-available datasets in the Harvard Database repository
 
 ![](images/code-reproducibility-trisovic.png)
 
-### Computational Provenance and Workflows
+## Computational Provenance and Workflows
 
 Computational provenance refers to the origin and processing history of data including:
 
@@ -66,7 +85,7 @@ Here's an example of a computational workflow from Mark Carls: [Mark Carls. Anal
 This image is a screenshot of an interactive user interface of a workflow built by DataONE. You can clearly see which data files were inputs to the process, the scripts that are used to process and visualize the data, and the final output objects that are produced, in this case two graphical maps of Prince William Sound in Alaska.
 
 
-### From Provenance to Reproducibility
+## From Provenance to Reproducibility
 
 ![](images/Prov-History.png)
 
@@ -103,7 +122,7 @@ Data citation best practices are focused on providing credit where credit is due
 - Specificity and Verifiability
 - Interoperability and Flexibility -->
 
-### Data Citation and Transitive Credit
+## Data Citation and Transitive Credit
 
 We want to move towards a model such that when a user cites a research publication we will also know:
 
@@ -116,7 +135,7 @@ We want to move towards a model such that when a user cites a research publicati
 
 This is transitive credit. And it changes the way in which we think about science communication and traditional publications. 
 
-### Reproducible Papers with `rrtools`
+## Reproducible Papers with `rrtools`
 
 A great overview of this approach to reproducible papers comes from:
 
@@ -137,7 +156,7 @@ Research compendium makes it easy for researchers to do their work but also for 
 Fortunately for us, Ben Marwick (and others) have written an R package called [rrtools](https://github.com/benmarwick/rrtools) that helps us create a research compendium from scratch.
 
 
-::: callout-tip
+::: {.callout-tip}
 
 ##  Set up
 
@@ -158,7 +177,7 @@ To start a reproducible paper with `rrtools`:
 #remotes::install_github("benmarwick/rrtools")
 ```
 
-```{r use-compendium, eval=FALSE, echo=TRUE}
+```r
 ## "mypaper" is the name of the Rproj with my research compendia
 rrtools::use_compendium("mypaper")
 ```
@@ -172,7 +191,7 @@ rrtools::use_compendium("mypaper")
 - Set up a README file in the RMarkdown format
 - Create an `analysis` folder to hold our reproducible paper
 
-```{r add-structure, eval=FALSE, echo=TRUE}
+```r
 
 rrtools::use_readme_rmd()
 rrtools::use_analysis()
@@ -185,20 +204,20 @@ This creates a standard, predictable layout for our code and data and outputs th
 :::
 
 
-#### Creating a `git` and GitHub repository with `usethis`
+### Creating a `git` and GitHub repository with `usethis`
 
 > `usethis` is a package that facilitates interactive workflows for R project creation and development. It automates repetitive tasks that arise during project setup and development.
 
 We are going to use two functions to start tracking our work in `git`, create a remote repository in GitHub and be able to push and pull between the local version and the remote. To learn more about this package checkout the [package documentation](https://usethis.r-lib.org/).
 
 
-::: callout-tip
+::: {.callout-tip}
 ## Set up
-0. Make sure your are in "mypaper" Rproj.
+1. Make sure your are in "mypaper" Rproj.
 
-1. In the Console run `usethis::use_git()` to create a local git repo. Choose yes to both questions when prompted (to commit files, and to restart R). 
+2. In the Console run `usethis::use_git()` to create a local git repo. Choose yes to both questions when prompted (to commit files, and to restart R). 
 
-2. Then, in the Console, run `usethis::use_github()` to create an upstream remote repo (in GitHub).
+3. Then, in the Console, run `usethis::use_github()` to create an upstream remote repo (in GitHub).
 
 And that's it! Now your have your research compendium in your local computer and your changes are being tracked by `git` and your can pull and push to GitHub.
 
@@ -213,56 +232,53 @@ You'll notice a `analysis/templates` directory that contains journal citation st
 
 What if I want a template from another journal, different from the Journal of Archeological Science? We can create other journal's template with the `rticles` package. This package will provide the templates and necessary information to render your paper in the journal of your choice (note: not all journal are in the `rticles` package). With that in mind, we will delete the existing `paper` directory and create a new one shortly.
 
-### RMarkdown templates with `rticles`
+## RMarkdown templates with `rticles`
 
 The [`rticles`](https://github.com/rstudio/rticles%20B) package provides a lot of other great templates for formatting your paper specifically to the requirements of many journals. In addition to a custom CSL file for reference customization, `rticles` supports custom LATeX templates that fit the formatting requirements of each journals. 
 
-:::callout-important
+:::{.callout-note}
 ## Tinytex and rendering to PDF
+
 To be able to render your document to PDF you need to have `tinytex` installed in your machine.
 
 In the console run:
 
 
-```{r}
-#| eval: false
-#| 
+```r
 install.packages('tinytex') ## this package is already installed in our server
 
 tinytex::install_tinytex() ## this may take several minutes
 
 ```
 
-
-
 :::
 
 
 
-::: callout-tip
+::: {.callout-tip}
 
 ## Set up
 
-0.  If you do not have `rticle` installed, go ahead and install calling the following function in the console: `install.packages('rticles')` Restart your RStudio session.
+1.  If you do not have `rticle` installed, go ahead and install calling the following function in the console: `install.packages('rticles')` Restart your RStudio session.
 
-1. To create a new file from `rticles`custom templates, got to `File | New File | R Markdown...` menu, which shows the following dialog:
+2. To create a new file from `rticles`custom templates, got to `File | New File | R Markdown...` menu, which shows the following dialog:
 
 ![](images/rticles-new.png)
 
-2. Go to "From Template" in the left side menu.
+3. Go to "From Template" in the left side menu.
 
-3. Select the "PNAS" template, give the file a name and set the location of the files to be `mypaper/analysis`, and click "OK". 
+4. Select the "PNAS" template, give the file a name and set the location of the files to be `mypaper/analysis`, and click "OK". 
 
-4. You can now Knit the Rmd file to see a highly-targeted article format, like this one for PNAS:
+5. You can now Knit the Rmd file to see a highly-targeted article format, like this one for PNAS:
 
 ![](images/rticles-pnas.png)
 
 ::: 
 
 
-### Workflow in a nutshell
+## Workflow in a nutshell
 
-::: {.callout-caution icon=false}
+::: {.callout-tip}
 ## Summary
 
 - Use `rrtools` to generate the core directory layout and approach to data handling.
@@ -284,7 +300,7 @@ You can then write all of your R code in your RMarkdown/Quarto, and generate you
 
 
 
-### Adding `renv` to conserve your environment
+## Adding `renv` to conserve your environment
 
 - `rrtools` has a couple more tricks up its sleeve to help your compendium be as reproducible and portable as possible. 
 
@@ -305,7 +321,7 @@ You can then write all of your R code in your RMarkdown/Quarto, and generate you
  
  - You can read the `renv.lock` file using `renv::restore()`, when needed. This will install the versions of the packages needed.
  
-### Conserve your computational environement with Docker
+## Conserve your computational environement with Docker
 
 - The `rrtools` package then uses this `renv.lock` file to build what is called a Dockerfile. 
 - **[Docker](http://www.docker.com) allows you to build containers, a standard unit of software that packages up code and all its dependencies so an application runs quickly and reliably from one computing environment to another.** 
@@ -362,7 +378,7 @@ RUN . /etc/environment \
 
 
  
-### The 5th Generation of Reproducible Papers
+## The 5th Generation of Reproducible Papers
 
 ![](images/Living-paper.png)
 
@@ -384,7 +400,7 @@ By combining data, code and the compute environment, Tales allow researchers to:
 
 **Full circle reproducibility can be achieved by publishing data, code AND the computational environment.**
 
-### Resources
+## Resources
 
 - [`rrtools` documentation](https://github.com/benmarwick/rrtools)
 - The [`rticles`](https://github.com/rstudio/rticles%20B)

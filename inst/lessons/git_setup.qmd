@@ -1,14 +1,20 @@
-## Learning Objectives {.unnumbered}
+---
+title: Git and GitHub Setup
+---
+
+:::{.callout-tip}
+## Learning objectives
 
 -   Set global options in your `.gitconfig` file
 -   Practice how to set up GitHub Authentication using a Personal Access Token (PAT)
+:::
 
 ## Set up global options in Git
 
 Before using Git, you need to tell it who you are, also known as setting the **global options**. You can do this either on the terminal using git command or in the console using the R package `usethis`. For this lesson we will use the `usethis` package. However, you can also find the git commands to reference in the future.
 
 
-::: {.callout-caution icon=false}
+::: {.callout-note}
 ## What's the Terminal?
 
 Technically, the Terminal is an interface for the shell, a computer program. To put that simply, we use the Terminal to tell a computer what to do. This is different from the Console in RStudio, which interprets R code and returns a value.
@@ -20,7 +26,7 @@ A Terminal tab should now be open right next to the Console tab.
 
 
 
-::: {.callout-caution icon=false}
+::: {.callout-tip}
 ## Don't be afraid to dip your toes in the Terminal
 Most of our Git operations will be done in RStudio, but there are some situations where you must work in the Terminal and use command line. It may be daunting to code in the Terminal, but as your comfort increases over time, you might find you prefer it. Either way, it's beneficial to learn *enough* command line and to feel comfortable in the Terminal. 
 
@@ -128,10 +134,10 @@ When you add your username and email to the global options you **must** use the 
 
 
 
-::: {.callout-important}
+::: {.callout-note}
 ## Why set the default branch name to `main`?
 
-Previously, the default branch name was `master` and this racist terminology for Git branches motivates us to update our default branch to `main` instead. 
+Previously, the default branch name was `master` and this terminology for Git branches invokes  motivates us to update our default branch to `main` instead. 
 
 :::
 
@@ -142,7 +148,7 @@ Finally, we will run a step that is **only necessary when working on a server**.
 
 You can access the terminal through RStudio by clicking Tools \> Terminal \> New Terminal.
 
-::: {.callout-caution}
+::: {.callout-warning}
 ## THIS ONLY NEEDS TO BE RUN ON THE SERVER 
 
 **DO NOT RUN THE NEXT LINE when setting up Git and GitHub on your Personal Computer**
@@ -167,7 +173,7 @@ The book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.htm
 
 We will be using a **Personal Access Token (PAT)** in this course. For better security and long term use, we recommend taking the extra steps to set up SSH keys (check out [Chapter 10 Set up Keys for SSH](https://happygitwithr.com/ssh-keys.html)).
 
-::: {.callout-tip icon=false}
+::: {.callout-tip}
 ## Setting up your PAT
 
 1.  Run `usethis::create_github_token()` in the Console.

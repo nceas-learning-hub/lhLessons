@@ -1,9 +1,15 @@
-## Learning Objectives {.unnumbered}
+---
+title: Working with Spatial Data
+---
+
+:::{.callout-tip}
+## Learning Objectives
 
 -   How to use the `sf` package to wrangle spatial data
 -   Static mapping with ggplot
 -   Adding basemaps to static maps
 -   Interactive mapping with `leaflet`
+:::
 
 ## Brief introduction to `sf`
 
@@ -35,7 +41,7 @@ The spatial data we will be using to create the map are:
 | Community locations and population | Jeanette Clark, Sharis Ochs, Derek Strong, and National Historic Geographic Information System. 2018. Languages used in Alaskan households, 1990-2015. Knowledge Network for Biocomplexity. [doi:10.5063/F11G0JHX](https://doi.org/10.5063/F11G0JHX). |
 | Alaska rivers                      | The rivers shapefile is a simplified version of Jared Kibele and Jeanette Clark. Rivers of Alaska grouped by SASAP region, 2018. Knowledge Network for Biocomplexity. [doi:10.5063/F1SJ1HVW](https://doi.org/10.5063/F1PZ573F).                       |
 
-::: callout-tip
+::: {.callout-tip}
 ## Setup
 
 1.  Navigate to [this dataset](https://dev.nceas.ucsb.edu/view/urn:uuid:6f07cb25-a4a1-48e8-95cb-74f532f3ce2d) on KNB's test site and download the zip folder.
@@ -202,8 +208,9 @@ ak_rgns_3338_sf %>%
 
 You can also use the `sf` package to create spatial joins, useful for when you want to utilize two datasets together.
 
-::: callout-note
-### Exercise: How many people live in each of these Alaska regions?
+::: {.callout-exercise}
+
+### How many people live in each of these Alaska regions?
 
 We have some population data, but it gives the population by city, not by region. To determine the population per region we will need to:
 
@@ -217,8 +224,7 @@ We have some population data, but it gives the population by city, not by region
 
 Here we'll add a `_df` suffix to remind us that this is just a regular data frame, not a spatial data frame.  It does contain spatial variables (longitude and latitude), but as far as it knows, those are just numbers, not recognized as spatial geometry... yet!
 
-```{r}
-#| eval: false
+```r
 # read in population data
 pop_df <- read_csv(here("data/alaska_population.csv"))
 ```
@@ -254,8 +260,7 @@ Now we can do our spatial join! You can specify what geometry function the join 
 
 In this case, we want to find what region each city falls within, so we will use `st_within`.
 
-```{r}
-#| eval: false
+```r
 pop_joined_sf <- st_join(pop_4326_sf, 
                          ak_rgns_3338_sf, 
                          join = st_within)
@@ -263,7 +268,7 @@ pop_joined_sf <- st_join(pop_4326_sf,
 
 This gives an error!
 
-``` html
+```r
 Error: st_crs(x) == st_crs(y) is not TRUE
 ```
 
@@ -282,7 +287,7 @@ pop_joined_sf <- st_join(pop_3338_sf,
 head(pop_joined_sf)
 ```
 
-::: {.callout-caution icon="false"}
+::: {.callout-note}
 #### Exploring types of joins
 
 There are many different types of joins you can do with geospatial data. Examine the help page for these joins (`?st_within()` will get you there). What other joins types might be appropriate for examining the relationship between points and polygons? What about two sets of polygons?
@@ -314,7 +319,7 @@ plot(pop_rgn_3338_sf["total_pop"])
 
 So far, we have learned how to use `sf` and `dplyr` to use a spatial join on two datasets and calculate a summary metric from the result of that join.
 
-::: {.callout-caution icon="false"}
+::: {.callout-note}
 #### `sf` and `tidyverse` best practices
 
 The `group_by()` and `summarize()` functions can also be used on `sf` objects to summarize within a dataset and combine geometries. Many of the `tidyverse` functions have methods specific for `sf` objects, some of which have additional arguments that wouldn't be relevant to the `data.frame` methods. You can run `?sf::tidyverse` to get documentation on the `tidyverse` `sf` methods.
@@ -346,8 +351,7 @@ plot(pop_mgmt_3338_sf["total_pop"])
 
 Save the spatial object to disk using `write_sf()` and specifying the filename. Writing your file with the extension `.shp` will assume an ESRI driver [driver](http://www.gdal.org/ogr_formats.html), but there are many other format options available.
 
-```{r plot}
-#| eval: false
+```r
 write_sf(pop_rgn_3338_sf, here("data/ak_regions_population.shp"))
 ```
 
@@ -381,8 +385,7 @@ We can also plot multiple shapefiles in the same plot. Say if we want to visuali
 rivers_3338_sf <- read_sf(here("data/shapefiles/ak_rivers_simp.shp"))
 ```
 
-```{r}
-#| eval: false
+```r
 rivers_3338_sf <- read_sf(here("data/ak_rivers_simp.shp"))
 ```
 
@@ -428,7 +431,8 @@ pop_3857_sf <- st_transform(pop_3338_sf,
 #| message: false
 
 ggplot(data = pop_3857_sf) +
-    ggspatial::annotation_map_tile(type = "osm", zoom = 4, progress = 'none') + # higher zoom values are more detailed 
+    ggspatial::annotation_map_tile(type = "osm", zoom = 4, progress = 'none') + 
+    # higher zoom values are more detailed 
     geom_sf(aes(color = population),
             fill = NA) +
     scale_color_continuous(low = "darkkhaki",

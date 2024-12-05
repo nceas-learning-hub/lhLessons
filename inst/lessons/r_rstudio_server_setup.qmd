@@ -1,15 +1,20 @@
+---
+title: RStudio Server Setup
+---
 
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 - Practice creating an R Project
 - Organize an R Project for effective project management
 - Understand how to move in an R Project using paths and working directories
+:::
 
 ## Logon to the RStudio Server
 
 To prevent us from spending most of this lesson troubleshooting the myriad of issues that can arise when setting up the R, RStudio, and git environments, we have chosen to have everyone work on a remote server with all of the software you need installed. We will be using a special kind of RStudio just for servers called RStudio Server. If you have never worked on a remote server before, you can think of it like working on a different computer via the internet. Note that the server has no knowledge of the files on your local filesystem, but it is easy to transfer files from the server to your local computer, and vice-versa, using the RStudio server interface.
 
-::: {.callout-tip icon=false}
+::: {.callout-tip}
 ## Server Setup
 You should have received an email prompting you to change your password for your server account. If you did not, please put up a post-it and someone will help you.
 
@@ -24,7 +29,7 @@ In this course, we are going to be using an R project to organize our work. An R
 
 **The Big Idea:** using an R project is a reproducible research best practice because it bundles all your work within a working directory. Consider your current data analysis workflow. Where do you import you data? Where do you clean and wrangle it? Where do you create graphs, and ultimately, a final report? Are you going back and forth between multiple software tools like Microsoft Excel, JMP, and Google Docs? An R project and the tools in R that we will talk about today will consolidate this process because it can all be done (and updated) in using one software tool, RStudio, and within one R project.
 
-::: {.callout-tip icon=false}
+::: {.callout-tip}
 ## R Project Setup
 
 1. In the "File" menu, select "New Project"
@@ -37,7 +42,7 @@ In this course, we are going to be using an R project to organize our work. An R
 RStudio should open your new project automatically after creating it. One way to check this is by looking at the top right corner and checking for the project name.
 :::
 
-<!-- ::: {.callout-tip icon=false} -->
+<!-- ::: {.callout-tip} -->
 <!-- ## Sharing your project -->
 <!-- To share your project with the instructor team, locate the “project switcher” dropdown menu in the upper right of your RStudio window. This dropdown has the name of your project (eg: training_vargas), and a dropdown arrow. Click the dropdown menu, then “Share Project.” When the dialog box pops up, add the following usernames to your project: -->
 
@@ -78,7 +83,7 @@ Directory organization will vary from project to project, but the ultimate goal 
 :::
 
 
-::: {.callout-tip icon=false}
+::: {.callout-tip}
 ## Project Sub-directories
 For this week we are going to create 3 folder (directories) in our `training_{USERNAME}` Rproject.
 

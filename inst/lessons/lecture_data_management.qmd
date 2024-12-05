@@ -1,11 +1,17 @@
-## Learning Objectives {.unnumbered}
+---
+title: Data Management Essentials
+---
+
+:::{.callout-tip}
+## Learning Objectives
 
 -   Understand the importance of data management for successfully preserving data
 -   Review the Data Life Cycle and how it can guide the data management in a project
 -   Familiarize with what goes into a data management plans
 -   Learn about metadata guidelines and best practices for reproducibility
 -   Become familiar with environmental data repositories for accessing and publishing data
-
+:::
+  
 ## The Big Idea
 
 This lesson aims to get you thinking about how to manage your data for a research or synthesis project. And how to do it with the FAIR and CARE principles in mind. We introduce multiple concepts and provide resources that you can come back to when ever you start a new project or to apply these principles to a project you are currently working on.
@@ -402,7 +408,9 @@ The [CARE Principles](https://www.gida-global.org/care) for Indigenous Data Gove
 
 Now that we have talked about the big picture of data management, metadata and the FAIR and CARE principles, we will do an activity to evaluate the concepts and ideas we have discussed.
 
-## Exercise: Evaluate a Data Package on the EDI Repository
+:::{.callout-exercise}
+
+## Evaluate a Data Package on the EDI Repository
 
 Explore data packages published on EDI assess the quality of their metadata. Imagine you're a data curator!
 
@@ -416,9 +424,12 @@ Explore data packages published on EDI assess the quality of their metadata. Ima
 :::
 
 You and your group will evaluate a data package for its: (1) metadata quality, (2) data documentation quality for reproducibility, and (3) FAIRness and CAREness.
+:::
 
-::: callout-note
-### Exercise: Evaluate a data package on EDI Data Portal
+
+::: {.callout-exercise}
+
+### Evaluate a data package on EDI Data Portal
 
 1.  View our [Data Package Assessment Rubric](https://docs.google.com/document/d/1PQpw9ohOMY7K1yBWaknMHV0dGEm0GnZ9pCB8_i2JPoU/edit?usp=sharing) and make a copy of it to:
     a.  **Investigate the metadata in the provided data**

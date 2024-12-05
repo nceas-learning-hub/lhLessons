@@ -1,15 +1,18 @@
 ---
+title: Practice Session: Collaborative Report
 bibliography: book.bib
 ---
 
-## Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives
 
 -   Practice using common cleaning and wrangling functions
 -   Practice creating plots using common visualization functions in `ggplot`
 -   Practice saving and sharing data visualizations
 -   Practice Git and GitHub workflow and collaborating with a collegue
+:::
 
-::: callout-note
+::: {.callout-note}
 ## Acknowledgements
 
 These exercises are adapted from Allison Horst's EDS 221: Scientific Programming Essentials Course for the Bren School's Master of Environmental Data Science program.
@@ -21,7 +24,7 @@ These exercises will be using data on abundance, size, and trap counts (fishing 
 
 ## Exercise: Collaborate on an analysis and create a report to publish using GitHub Pages
 
-::: callout-tip
+::: {.callout-tip}
 ### Setup
 
 1.  Create a new repository with a partner
@@ -96,7 +99,7 @@ Questions 1-3 you will be working independently since you're working with differ
 
 The final step! Time to work together again. Collaborate with your partner in `lobster-report.qmd` to create a report to publish to GitHub pages.
 
-::: {.callout-caution icon=false}
+::: {.callout-note}
 ## Code Review
 As you're working on the `lobster-report.qmd` you will be conducting [two types of code reviews](https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Quality/Code_Review#:~:text=Code%20review%20practices%20fall%20into,review%20and%20lightweight%20code%20review): (1) pair programming and (2) lightweight code review.
 

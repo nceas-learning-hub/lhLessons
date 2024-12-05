@@ -12,7 +12,7 @@ title: Writing Functions
 
 ## R Functions
 
-::: {.callout-caution icon=false collapse=true}
+::: {.callout-note}
 ### Quick reminder: What is a function?
 
 A set of statements or expressions of code that are organized together to perform a specific task.
@@ -51,7 +51,7 @@ By creating small functions that only complete one logical task and do it well, 
 -   Improved error testing
 
 
-::: {.callout-caution icon=false}
+::: {.callout-tip}
 #### Naming Functions
 The name of a function is important. Ideally, function names should be short, but still clearly captures what the function does.
 
@@ -113,9 +113,7 @@ This takes a vector of temperatures in Fahrenheit, and returns a vector of tempe
 
 #### Your Turn: Create a Function that Converts Celsius to Fahrenheit {.unnumbered}
 
-::: {.callout-note}
-
-#### Exercise
+::: {.callout-exercise}
 
 Create a function named `celsius_to_fahr` that does the reverse, it takes temperature data in Celsius as input, and returns the data converted to Fahrenheit. 
 
@@ -123,16 +121,13 @@ Create the function `celsius_to_fahr` in a new R Script file.
 
 Then use that formula to convert the `celsius` vector back into a vector of Fahrenheit values, and compare it to the original `airtemps` vector to ensure that your answers are correct. 
 
+:::{.callout-hint}
 **Hint:** the formula for Celsius to Fahrenheit conversions is `celsius * 9/5 + 32`.
 :::
 
 Did you encounter any issues with rounding or precision?
 
-::: {.callout-tip collapse=true icon=false}
-
-##### Solution, but don't peek!
-
-Don't peek until you write your own...
+::: {.callout-answer}
 
 ```{r}
 #| label: f2c-func-solution
@@ -148,6 +143,7 @@ airtemps == result
 
 :::
 
+:::
 
 ### Documenting R Functions
 
@@ -177,7 +173,7 @@ fahr_to_celsius <- function(fahr) {
 
 Note the use of the `@param` keyword to define the expectations of input data, and the `@return` keyword for defining the value that is returned from the function. The `@examples` function is useful as a reminder as to how to use the function. Finally, the `@export` keyword indicates that, if this function were added to a package, then the function should be available to other code and packages to utilize.
 
-::: {.callout-caution icon=false}
+::: {.callout-note}
 
 # Check it out: Function Documentation Section from R Packages (2e)
 
@@ -267,13 +263,16 @@ scatterplot(temps_df, point_size = 3, font_size = 16)
 
 Once these functions are set up, all of the plots built with them can be reformatted by changing the settings in just the functions, whether they were used to create 1, 10, or 100 plots.
 
+:::{.callout-tip}
 ### Summary
 
 -   Functions are useful to reduce redundancy, reuse code, and reduce errors
 -   Build functions with `function()`
 -   Document functions with `roxygen2` comments
 
-::: {.callout-caution icon=false}
+:::
+
+::: {.callout-tip}
 #### Workflow for Creating Functions
 
 1. Have a clear goal (sometimes it helps to create a visual).

@@ -1,0 +1,22 @@
+module,lesson
+Day 1,r_rstudio_server_setup
+Day 1,git_setup
+Day 1,r_programming_introduction
+Day 1,r_quarto_literate_analysis
+Day 1,activity_reproducibility_lego
+Day 2,github_introduction
+Day 2,lecture_tidy_data
+Day 2,r_tidyverse_clean_wrangle
+Day 2,r_practice_tidy_data_joins
+Day 3,github_collaboration
+Day 3,r_data_visualization
+Day 3,github_publishing
+Day 3,r_practice_clean_wrangle_visualize
+Day 3,lecture_data_management
+Day 4,r_geospatial_vector_analysis
+Day 4,r_functions
+Day 4,r_packages
+Day 4,r_practice_functions
+Day 5,github_project_management
+Day 5,r_provenance_reproducibility
+Day 5,r_git_install_guide

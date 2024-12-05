@@ -1,3 +1,6 @@
+---
+title: Installing R and Git on Your Computer
+---
 
 ## Installation steps for MacOS
 
@@ -166,7 +169,7 @@ knitr::include_graphics("images/install-pkg-success.png")
 
 ## Troubleshooting
 
-:::callout-warning
+:::{.callout-warning}
 ## Issues installing Git on a Windows
 If you download Git and the Git commands still not recognized by your computer, check your computer's PATHS.
 
