@@ -199,7 +199,7 @@ It is important to highlight that this configuration can be repo specific. This 
 
 If you don't define `pull.rebase = "false"` when setting the global configurations, you will have to define this for each repository you create. You will likely see the following message after you pull, meaning you have not define how to reconciling two branches in your repository. 
 
-![](images/git_pull_reconcile_message.png)
+![](images/git_setup/git_pull_reconcile_message.png)
 
 
 To solve this issues you have to run either of the two suggested strategies on the terminal.

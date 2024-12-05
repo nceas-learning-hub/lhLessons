@@ -48,7 +48,7 @@ Successfully managing your data throughout a research project helps ensures its 
 
 The Data Life Cycle gives you an overview of meaningful steps data goes through in a research project, from planning to archival. This step-by-step breakdown facilitates overseeing individual actions, operations and processes required at each stage. This is a visual tool that aims o help scientists plan and anticipate what will be the *"data needs"* for a specific project ([Faundeen et al 2013](https://pubs.usgs.gov/of/2013/1265/pdf/of2013-1265.pdf)) .
 
-![Source: Adapted from Faundeen et al 2013, USGS & DataONE](images/data-life-cycle-usgs.png){fig-alt="Data Life Cycle graphic with tools for each step." fig-align="right"}
+![Source: Adapted from Faundeen et al 2013, USGS & DataONE](images/lecture_data_management/data-life-cycle-usgs.png){fig-alt="Data Life Cycle graphic with tools for each step." fig-align="right"}
 
 <br>
 
@@ -70,7 +70,7 @@ And the cycle begins again.
 
 <br>
 
-![Source: DataONE Data Life Cycle](images/data-life-cycle.png){fig-alt="Data Life Cycle graphic with tools for each step." fig-align="center"}
+![Source: DataONE Data Life Cycle](images/lecture_data_management/data-life-cycle.png){fig-alt="Data Life Cycle graphic with tools for each step." fig-align="center"}
 
 This wheel is powered by the cross-cutting elements involved across all stages of the cycle.
 
@@ -314,7 +314,7 @@ Researchers should get in the habit of citing the data that they use (even if it
 
 ## Data Preservation & Sharing
 
-![](images/WhyManage-small.png)
+![](images/lecture_data_management/WhyManage-small.png)
 
 ### Data Packages
 
@@ -326,7 +326,7 @@ Many data repositories assign a unique identifier to every version of every data
 
 In the graphic to the side, the package can be cited with the DOI `doi:10.5063/F1Z1899CZ`,and each of the individual files have their own identifiers as well.
 
-![](images/data-package.png)
+![](images/lecture_data_management/data-package.png)
 
 ### Data Repositories: Built for Data (and code)
 
@@ -351,7 +351,7 @@ DataONE is a federation of dozens of data repositories that work together to mak
 
 DataONE can be [searched on the web](https://search.dataone.org/), which effectively allows a single search to find data from the dozens of members of DataONE, rather than visiting each of the (currently 44!) repositories one at a time.
 
-![](images/DataONECNs.png) 
+![](images/lecture_data_management/DataONECNs.png) 
 
 
 <br>
@@ -359,7 +359,7 @@ DataONE can be [searched on the web](https://search.dataone.org/), which effecti
 ## The FAIR and CARE Principles 
 
 
-![Source: Global Indigenous Data Alliance](images/FAIR_CARE.png){width="92%" fig-align="center"}](https://www.gida-global.org/whoweare)
+![Source: Global Indigenous Data Alliance](images/lecture_data_management/FAIR_CARE.png){width="92%" fig-align="center"}](https://www.gida-global.org/whoweare)
 
 The idea behind these principles is to increase access and usage of complex and large datasets for innovation, discovery, and decision-making. This means making data available to machines, researchers, Indigenous communities, policy makers, and more.
 
@@ -373,7 +373,7 @@ Together, these two principle encourage us to push open and other data movements
 
 With the rise of open science and more accessible data, it is becoming increasingly important to address accessibility and openness in multiple ways. The [FAIR principles](https://force11.org/info/guiding-principles-for-findable-accessible-interoperable-and-re-usable-data-publishing-version-b1-0/) focuses on *how* to prepare your data so that it can be reused by others (versus just open access of research outputs). In 2016, the data stewardship community published principles surrounding best practices for open data management, including FAIR. FAIR stands for Findable, Accessible, Interoperable, and Reproducible. **It is best to think about FAIR as a set of comprehensive standards for you to use while curating your data**. And each principle of FAIR can be translated into a set of actions you can take during the entire lifecycle of research data management.
 
-[![Source: Fair Teaching Handbook](images/FAIRsFAIR.png){width="80%" fig-align="center"}](https://fairsfair.gitbook.io/fair-teaching-handbook/)
+[![Source: Fair Teaching Handbook](images/lecture_data_management/FAIRsFAIR.png){width="80%" fig-align="center"}](https://fairsfair.gitbook.io/fair-teaching-handbook/)
 
 | FAIR                  | Definition                                                                                    |
 |------------------|------------------------------------------------------|
@@ -386,7 +386,7 @@ With the rise of open science and more accessible data, it is becoming increasin
 
 The [CARE Principles](https://www.gida-global.org/care) for Indigenous Data Governance were developed by the International Indigenous Data Sovereignty Interest Group in consultation with Indigenous Peoples, scholars, non-profit organizations, and governments (@carroll_care_2020). They address concerns related to the people and purpose of data. It advocates for greater Indigenous control and oversight in order to share data on Indigenous Peoples' terms. These principles are people and purpose-oriented, reflecting the crucial role data have in advancing Indigenous innovation and self-determination. CARE stands for Collective benefits, Authority control, Responsibility and Ethics. It details that the use of Indigenous data should result in tangible benefits for Indigenous collectives through inclusive development and innovation, improved governance and citizen engagement, and result in equitable outcomes.
 
-[![Source: Carroll, S.R., et al, 2020. The CARE Principles for Indigenous Data Governance](images/CAREsCARE.png){width="80%" fig-align="center"}](https://datascience.codata.org/articles/10.5334/dsj-2020-043/)
+[![Source: Carroll, S.R., et al, 2020. The CARE Principles for Indigenous Data Governance](images/lecture_data_management/CAREsCARE.png){width="80%" fig-align="center"}](https://datascience.codata.org/articles/10.5334/dsj-2020-043/)
 
 | CARE                         | Definition                                                                                                                                                                                                                                                                                                                                                                                    |
 |----------------|--------------------------------------------------------|

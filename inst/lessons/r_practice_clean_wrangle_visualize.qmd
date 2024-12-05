@@ -1,5 +1,5 @@
 ---
-title: Practice Session: Collaborative Report
+title: "Practice Session: Collaborative Report"
 bibliography: book.bib
 ---
 
@@ -39,7 +39,6 @@ These exercises will be using data on abundance, size, and trap counts (fishing 
 - Collaborator completes Step 2
 - Owner completes Step 3
 
-
 2.  **Collaborator** creates new files for exercise
     a. The Collaborator creates the following directory (folder):
         i. `analysis` 
@@ -72,11 +71,213 @@ Questions 1-3 you will be working independently since you're working with differ
 
 #### Owner
 
-{{< include /sections/r-practice-owner-clean-wrangle.qmd >}}
+::: {.callout-tip}
+## Setup
+
+1.  Open the Quarto Document `owner-analysis.qmd`
+    a.  Check the `YAML` and add your name to the `author` field
+    b.  Create a new section with a level 2 header and title it "Exercise: Explore, Clean, and Wrangle Data"
+2.  Load the following libraries at the top of your Quarto Document
+
+<!-- NOTE: since no code chunks are run to render, make them "dumb" but
+     display with r syntax coloring -->
+```r
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(here)
+```
+
+3.  Read in the data and store the data frame as `lobster_abundance`
+
+```r
+lobster_abundance <- read_csv(here::here("data/Lobster_Abundance_All_Years_20220829.csv"))
+```
+
+4. Look at your data. Take a minute to explore what your data structure looks like, what data types are in the data frame, or use a function to get a high-level summary of the data you're working with.
+
+5. Use the Git workflow: ```Stage (add) -> Commit -> Pull -> Push```
+    - **Note:** You also want to `Pull` when you first open a project
+
+:::
+
+## Convert missing values using `mutate()` and `na_if()`
+
+::: {.callout-exercise}
+### Question 1
+
+The variable `SIZE_MM` uses -99999 as the code for missing values (see metadata or use `unique()`). This has the potential to cause conflicts with our analyses, so let's convert -99999 to an `NA` value. Do this using `mutate()` and `na_if()`. Look up the help page to see how to use `na_if()`. Check your output data using `unique()`.
+
+::: {.callout-answer}
+
+```r
+lobster_abundance <- lobster_abundance %>% 
+    mutate(SIZE_MM = na_if(SIZE_MM, -99999))
+```
+
+:::
+:::
+
+## `filter()` practice
+
+::: {.callout-exercise}
+### Question 2
+
+Create and store a subset that does NOT include observations from Naples Reef (`NAPL`). Check your output data frame to ensure that `NAPL` is NOT in the data frame.
+
+::::{.callout-answer}
+
+```r
+not_napl <- lobster_abundance %>% 
+    filter(SITE != "NAPL")
+```
+
+::::
+:::
+
+::: {.callout-exercise}
+### Question 3
+
+Create and store a subset with lobsters at Arroyo Quemado (`AQUE`) AND with a carapace length greater than 70 mm. Check your output.
+
+::::{.callout-answer}
+
+```r
+aque_70mm <- lobster_abundance %>% 
+    filter(SITE == "AQUE" & SIZE_MM >= 70)
+```
+
+::::
+:::
+
+::: {.callout-exercise}
+### Question 4
+Find the maximum carapace length using `max()` and group by `SITE` and `MONTH`. Think about how you want to treat the NA values in `SIZE_MM` (Hint: check the arguments in `max()`). Check your output.
+
+::::{.callout-answer}
+
+```r
+# `group_by() %>% summarize()` practice
+
+max_lobster <- lobster_abundance %>% 
+  group_by(SITE, MONTH) %>% 
+  summarize(MAX_LENGTH = max(SIZE_MM, na.rm = TRUE))
+```
+
+::::
+:::
+
+
+::: callout-important
+
+## Save your work and don't forget the Git and GitHub workflow!
+After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
+:::
+
 
 #### Collaborator
 
-{{< include /sections/r-practice-collaborator-clean-wrangle.qmd >}}
+
+::: callout-tip
+## Setup
+
+
+1.  Open the Quarto Document `collaborator-analysis.qmd`
+    a. Check the `YAML` and add your name to the `author` field
+    b. Create a new section with a level 2 header and title it "Exercise: Explore, Clean, and Wrangle Data"
+2.  Load the following libraries at the top of your Quarto Document.
+
+```r
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(here)
+```
+
+3.  Read in the data and store the data frame as `lobster_traps`
+
+```r
+lobster_traps <- read_csv(here::here("data/Lobster_Trap_Counts_All_Years_20210519.csv"))
+```
+
+4. Look at your data. Take a minute to explore what your data structure looks like, what data types are in the data frame, or use a function to get a high-level summary of the data you're working with.
+
+5. Use the Git workflow: ```Stage (add) -> Commit -> Pull -> Push```
+    - **Note:** You also want to `Pull` when you first open a project
+    
+:::
+
+## Convert missing values using `mutate()` and `na_if()`
+
+::: {.callout-exercise}
+
+### Question 1
+
+The variable `TRAPS` uses -99999 as the code for missing values (see metadata or use `unique()`). This has the potential to cause conflicts with our analyses, so let's convert -99999 to an `NA` value. Do this using `mutate()` and `na_if()`. Look up the help page to see how to use `na_if()`. Check your output data using `unique()`.
+
+::::{.callout-answer}
+
+```r
+lobster_traps <- lobster_traps %>% 
+    mutate(TRAPS = na_if(TRAPS, -99999))
+```
+
+::::
+:::
+
+## `filter()` practice
+
+::: {.callout-exercise}
+### Question 2
+Create and store a subset that does NOT include observations from Naples Reef (`NAPL`). Check your output data frame to ensure that `NAPL` is NOT in the data frame.
+
+::::{.callout-answer}
+
+```r
+not_napl <- lobster_traps %>% 
+    filter(SITE != "NAPL")
+```
+
+::::
+:::
+
+::: {.callout-exercise}
+### Question 3
+Create and store a subset with lobsters at Carpinteria Reef (`CARP`) AND number of commercial trap floats is greater than 20. Check your output.
+
+::::{.callout-answer}
+
+```r
+carp_20_traps <- lobster_traps %>% 
+    filter(SITE == "CARP" & TRAPS > 20)
+```
+
+::::
+:::
+
+::: {.callout-exercise}
+### Question 4
+Find the maximum number of commercial trap floats using `max()` and group by `SITE` and `MONTH`. Think about how you want to treat the `NA` values in `TRAPS` (Hint: check the arguments in `max()`). Check your output.
+
+::::{.callout-answer}
+
+```r
+# `group_by() %>% summarize()` practice
+max_lobster_traps <- lobster_traps %>% 
+    group_by(SITE, MONTH) %>%
+    summarize(MAX_TRAPS = max(TRAPS, na.rm = TRUE))
+```
+
+::::
+:::
+
+::: callout-important
+
+## Save your work and Don't forget the Git and GitHub workflow!
+After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
+:::
 
 ::: 
 
@@ -86,11 +287,354 @@ Questions 1-3 you will be working independently since you're working with differ
 
 #### Owner
 
-{{< include /sections/r-practice-owner-visualize.qmd >}}
+::: callout-tip
+## Setup
+
+1. Stay in the Quarto Document `owner-analysis.qmd` and create a new section with a level 2 header and title it "Exercise: Data Visualization"
+
+**Structure of the data visualization exercises:** 
+
+-  In this section, you will first have you create the necessary subsets to create the data visualizations, as well as the basic code to create a visualization. 
+- The next step is to return to the data visualization code you've written and add styling code to it. For this exercise, only add styling code to the visualization you want to include in the `lobster-report.qmd` (start with just one plot and if there's time add styling code to another plot).
+
+- Lastly, save the final visualizations to the `figs` folder before collaborating on the `lobster-report.qmd`.
+:::
+
+```r
+## Run this chunk to test exercises ##
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+lobster_abundance <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-sbc.77.8&entityid=f32823fba432f58f66c06b589b7efac6") %>% 
+    mutate(SIZE_MM = na_if(SIZE_MM, -99999))
+```
+
+
+::: {.callout-exercise}
+### Question 5
+Create a multi-panel plot of lobster carapace length (`SIZE_MM`) using `ggplot()`, `geom_histogram()`, and `facet_wrap()`. Use the variable `SITE` in `facet_wrap()`. Use the object `lobster_abundance`.
+
+:::: {.callout-answer}
+
+```r
+ggplot(data = lobster_abundance, 
+       aes(x = SIZE_MM)) +
+    geom_histogram() +
+    facet_wrap(~SITE)
+```
+
+<details>
+<summary>Plots</summary>
+
+![](images/r_practice_clean_wrangle_visualize/lobster_size_hist.png){width="75%" fig-align="center"}
+</details>
+
+::::
+:::
+
+::: {.callout-exercise}
+### Question 6
+
+Create a line graph of the number of total lobsters observed (y-axis) by year (x-axis) in the study, grouped by `SITE`.
+
+:::: {.callout-answer}
+
+First, you'll need to create a new dataset subset called `lobsters_summarize`:
+
+- Group the data by `SITE` AND `YEAR`
+- Calculate the total number of lobsters observed using `count()`
+
+```r
+lobsters_summarize <- lobster_abundance %>% 
+  group_by(SITE, YEAR) %>% 
+  summarize(COUNT = n())
+```
+
+Next, create a line graph using `ggplot()` and `geom_line()`. Use `geom_point()` to make the data points more distinct, but ultimately up to you if you want to use it or not. We also want `SITE` information on this graph, do this by specifying the variable in the `color` argument. Where should the `color` argument go? Inside or outside of `aes()`? Why or why not?
+
+```r
+# line plot
+ggplot(data = lobsters_summarize, aes(x = YEAR, y = COUNT)) +
+  geom_line(aes(color = SITE)) 
+
+# line and point plot
+ggplot(data = lobsters_summarize, aes(x = YEAR, y = COUNT)) +
+  geom_point(aes(color = SITE)) +
+  geom_line(aes(color = SITE)) 
+```
+
+<details>
+<summary>Plots</summary>
+::::: {#lobster-line-plots layout-ncol=2}
+![Line plot](images/r_practice_clean_wrangle_visualize/lobster_line_total_plot.png){width="50%"} 
+
+![Line and point plot](images/r_practice_clean_wrangle_visualize/lobster_point_line_total_plot.png){width="50%"}
+:::::
+</details>
+::::
+:::
+
+
+::: {.callout-exercise}
+### Question 7
+Create a bar graph that shows the amount of small and large sized carapace lobsters at each `SITE` from 2019-2021. **Note:** The small and large metrics are completely made up and are not based on any known facts.
+
+:::: {.callout-answer}
+
+First, you'll need to create a new dataset subset called `lobster_size_lrg`:
+
+- `filter()` for the years 2019, 2020, and 2021
+- Add a new column called `SIZE_BIN` that contains the values "small" or "large".  A "small" carapace size is <= 70 mm, and a "large" carapace size is greater than 70 mm. Use `mutate()` and `if_else()`. Check your output
+- Calculate the number of "small" and "large" sized lobsters using `group()` and `summarize()`. Check your output
+- Remove the `NA` values from the subsetted data. Hint: check out `drop_na()`. Check your output
+
+```r
+lobster_size_lrg <- lobster_abundance %>%
+    filter(YEAR %in% c(2019, 2020, 2021)) %>%
+    mutate(SIZE_BIN = if_else(SIZE_MM <= 70, true = "small", false = "large")) %>%
+    group_by(SITE, SIZE_BIN) %>%
+    summarize(COUNT = n()) %>%
+    drop_na()
+```
+
+Next, create a bar graph using `ggplot()` and `geom_bar()`. Note that `geom_bar()` automatically creates a stacked bar chart. Try using the argument `position = "dodge"` to make the bars side by side. Pick which bar position you like best.
+
+```r
+# bar plot
+ggplot(data = lobster_size_lrg, aes(x = SITE, y = COUNT, fill = SIZE_BIN)) +
+    geom_col()
+
+# dodged bar plot
+ggplot(data = lobster_size_lrg, aes(x = SITE, y = COUNT, fill = SIZE_BIN)) +
+    geom_col(position = "dodge")
+```
+
+<details>
+<summary>Plots</summary>
+::::: {#lobster-bar-plots layout-ncol=2}
+
+![Bar plot](images/r_practice_clean_wrangle_visualize/lobster_size_lrg_bar_plot.png){width="50%"}
+
+![Dodged bar plot](images/r_practice_clean_wrangle_visualize/lobster_size_lrg_dodged_plot.png){width="50%"}
+:::::
+</details>
+
+::::
+:::
+
+
+::: {.callout-exercise}
+### Question 8
+
+1. Go back to your visualization code and add some styling code (aka make your plots pretty!). Again, start with one plot and if there's time add styling code to additional plots. Here's a list of functions to help you get started (this is not an exhaustive list!) or revisit the [data visualization lesson](https://learning.nceas.ucsb.edu/2023-04-coreR/session_12.html):
+
+- `labs()`: modifying axis, legend and plot labels
+- `theme_()`: add a complete theme to your plot (i.e. `theme_light()`)
+- `theme()`: use to customize non-data components of a plot. We've listed out some parameters here, but run `?theme` to see the full list (there's a lot of customization you can do!)
+    - `axis.title.y`
+    - `panel.background`
+    - `plot.background`
+    - `panel.grid.major.*`
+    - `text`
+- `scale_*_date()`: use with dates and update breaks, limits, and labels
+- `scale_*_continuous()`: use with continuous variables and update breaks, limits, and labels
+- `scale_*_discrete()`: use with discrete variables and update breaks, limits, and labels
+- `scales` package: use this within the above scale functions and you can do things like add percents to axes labels
+- `geom_()` within a geom function you can modify:
+    - `fill`: updates fill colors (e.g. column, density, violin, & boxplot interior fill color)
+    - `color`: updates point & border line colors (generally)
+    - `shape`: update point style
+    - `alpha`: update transparency (0 = transparent, 1 = opaque)
+    - `size`: point size or line width
+    - `linetype`: update the line type (e.g. "dotted", "dashed", "dotdash", etc.)
+    
+2. Once you're happy with how your plot looks, assign it to an object, and save it to the `figs` directory using `ggsave()`
+:::
+
+::: callout-important
+## Save your work and Don't forget the Git and GitHub workflow!
+After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
+:::
+
 
 #### Collaborator
 
-{{< include /sections/r-practice-collaborator-visualize.qmd >}}
+::: {.callout-tip}
+## Setup
+
+1. Stay in the Quarto Document `collaborator-analysis.qmd` and create a new section with a level 2 header and title it "Exercise: Data Visualization"
+
+**Structure of the data visualization exercises:** 
+
+- First you will create the necessary subsets to create the data visualizations, as well as the basic code to create a visualization. 
+- Then, you will return to the data visualization code you've written and add styling code to it. For this exercise, only add styling code to the visualization you want to include in the `lobster-report.qmd` (start with just one plot and if there's time add styling code to another plot).
+- Lastly, save the final visualizations to the `figs` folder before collaborating on the `lobster-report.qmd`.
+:::
+
+```r
+## Run this chunk to test exercises ##
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+lobster_traps <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-sbc.77.8&entityid=66dd61c75bda17c23a3bce458c56ed84") %>% 
+    mutate(TRAPS = na_if(TRAPS, -99999))
+```
+
+::: {.callout-exercise}
+### Question 5
+Create a multi-panel plot of lobster commercial traps (`TRAPS`) grouped by year, using `ggplot()`, `geom_histogram()`, and `facet_wrap()`. Use the variable `YEAR` in `facet_wrap()`. Use the object `lobster_traps`.
+
+:::: {.callout-answer}
+
+```r
+ggplot(data = lobster_traps, aes(x = TRAPS)) +
+    geom_histogram() +
+    facet_wrap( ~ YEAR)
+```
+
+<details>
+<summary>Plots</summary>
+
+![](images/r_practice_clean_wrangle_visualize/lobster_traps_hist_plot.png){width="75%" fig-align="center"}
+</details>
+
+::::
+:::
+
+::: {.callout-exercise}
+### Question 6
+
+Create a line graph of the number of total lobster commercial traps observed (y-axis) by year (x-axis) in the study, grouped by `SITE`.
+
+:::: {.callout-answer}
+
+First, you'll need to create a new dataset subset called `lobsters_traps_summarize`:
+
+- Group the data by `SITE` AND `YEAR`
+- Calculate the total number of lobster commercial traps observed using `sum()`. Look up `sum()` if you need to. Call the new column `TOTAL_TRAPS`. Don't forget about `NAs` here!
+
+```r
+lobsters_traps_summarize <- lobster_traps %>% 
+  group_by(SITE, YEAR) %>% 
+  summarize(TOTAL_TRAPS = sum(TRAPS, na.rm = TRUE))
+```
+
+Next, create a line graph using `ggplot()` and `geom_line()`. Use `geom_point()` to make the data points more distinct, but ultimately up to you if you want to use it or not. We also want `SITE` information on this graph, do this by specifying the variable in the `color` argument. Where should the `color` argument go? Inside or outside of `aes()`? Why or why not?
+
+
+```r
+# line plot
+ggplot(data = lobsters_traps_summarize, aes(x = YEAR, y = TOTAL_TRAPS)) +
+    geom_line(aes(color = SITE))
+
+# line and point plot
+ggplot(data = lobsters_traps_summarize, aes(x = YEAR, y = TOTAL_TRAPS)) +
+    geom_point(aes(color = SITE)) +
+    geom_line(aes(color = SITE))
+```
+
+
+<details>
+<summary>Plots</summary>
+::::: {#lobster-traps-line-plots layout-ncol=2}
+![Line plot](images/r_practice_clean_wrangle_visualize/lobster_trap_line_total_plot.png){width="50%"} 
+
+![Line and point plot](images/r_practice_clean_wrangle_visualize/lobster_trap_line_point_total_plot.png){width="50%"}
+:::::
+</details>
+
+::::
+:::
+
+
+::: {.callout-exercise}
+### Question 7
+Create a bar graph that shows the amount of high and low fishing pressure of lobster commercial traps at each `SITE` from 2019-2021.
+**Note:** The high and low fishing pressure metrics are completely made up and are not based on any known facts.
+
+:::: {.callout-answer}
+
+First, you'll need to create a new dataset subset called `lobster_traps_fishing_pressure`:
+
+- `filter()` for the years 2019, 2020, and 2021
+- Add a new column called `FISHING_PRESSURE` that contains the values "high" or "low". A "high" fishing pressure has exactly or more than 8 traps, and a "low" fishing pressure has less than 8 traps. Use `mutate()` and `if_else()`. Check your output
+- Calculate the number of "high" and "low" observations using `group()` and `summarize()`. Check your output 
+- Remove the `NA` values from the subsetted data. Hint: check out `drop_na()`. Check your output
+
+```r
+lobster_traps_fishing_pressure <- lobster_traps %>% 
+    filter(YEAR %in% c(2019, 2020, 2021)) %>%
+    mutate(FISHING_PRESSURE = if_else(TRAPS >= 8, true = "high", false = "low")) %>%
+    group_by(SITE, FISHING_PRESSURE) %>%
+    summarize(COUNT = n()) %>%
+    drop_na()
+```
+
+Next, create a bar graph using `ggplot()` and `geom_bar()`. Note that `geom_bar()` automatically creates a stacked bar chart. Try using the argument `position = "dodge"` to make the bars side by side. Pick which bar position you like best.
+
+```r
+# bar plot
+ggplot(data = lobster_traps_fishing_pressure, aes(x = SITE, y = COUNT, fill = FISHING_PRESSURE)) +
+    geom_col()
+
+# dodged bar plot
+ggplot(data = lobster_traps_fishing_pressure, aes(x = SITE, y = COUNT, fill = FISHING_PRESSURE)) +
+    geom_col(position = "dodge")
+```
+
+<details>
+<summary>Plots</summary>
+::::: {#lobster-bar-plots layout-ncol=2}
+
+![Bar plot](images/r_practice_clean_wrangle_visualize/lobster_fishing_pressure_bar_plot.png){width="50%"} 
+
+![Dodged bar plot](images/r_practice_clean_wrangle_visualize/lobster_fishing_pressure_dodged_bar_plot.png){width="50%"}
+:::::
+</details>
+
+::::
+:::
+
+ 
+::: {.callout-exercise}
+### Question 8
+
+1. Go back to your visualization code and add some styling code (aka make your plots pretty!). Again, start with one plot and if there's time add styling code to additional plots. Here's a list of functions to help you get started (this is not an exhaustive list!) or revisit the [data visualization lesson](https://learning.nceas.ucsb.edu/2023-04-coreR/session_12.html):
+
+- `labs()`: modifying axis, legend and plot labels
+- `theme_()`: add a complete theme to your plot (i.e. `theme_light()`)
+- `theme()`: use to customize non-data components of a plot. We've listed out some parameters here, but run `?theme` to see the full list (there's a lot of customization you can do!)
+    - `axis.title.y`
+    - `panel.background`
+    - `plot.background`
+    - `panel.grid.major.*`
+    - `text`
+- `scale_*_date()`: use with dates and update breaks, limits, and labels
+- `scale_*_continuous()`: use with continuous variables and update breaks, limits, and labels
+- `scale_*_discrete()`: use with discrete variables and update breaks, limits, and labels
+- `scales` package: use this within the above scale functions and you can do things like add percents to axes labels
+- `geom_()` within a geom function you can modify:
+    - `fill`: updates fill colors (e.g. column, density, violin, & boxplot interior fill color)
+    - `color`: updates point & border line colors (generally)
+    - `shape`: update point style
+    - `alpha`: update transparency (0 = transparent, 1 = opaque)
+    - `size`: point size or line width
+    - `linetype`: update the line type (e.g. "dotted", "dashed", "dotdash", etc.)
+    
+2. Once you're happy with how your plot looks, assign it to an object, and save it to the `figs` directory using `ggsave()`
+:::
+
+::: callout-important
+## Save your work and Don't forget the Git and GitHub workflow!
+After you've completed the exercises or reached a significant stopping point, use the workflow: ```Stage (add) -> Commit -> Pull -> Push```
+:::
+
 
 :::
 
@@ -133,8 +677,7 @@ The sites `IVEE` and `NAPL` are marine protected areas (MPAs). Add this designat
 
 Use the object `lobster_abundance` and add a new column called `DESIGNATION` that contains "MPA" if the site is `IVEE` or `NAPL`, and "not MPA" for all other values.
 
-```{r}
-#| code-summary: "Answer"
+```r
 lobster_mpa <- lobster_abundance %>% 
     mutate(DESIGNATION = case_when(
     SITE %in% c("IVEE", "NAPL") ~ "MPA",
@@ -148,8 +691,7 @@ lobster_mpa <- lobster_abundance %>%
 
 Use the object `lobster_traps` and add a new column called `DESIGNATION` that contains "MPA" if the site is `IVEE` or `NAPL`, and "not MPA" for all other values.
 
-```{r}
-#| code-summary: "Answer"
+```r
 lobster_traps_mpa <- lobster_traps %>%
     mutate(DESIGNATION = case_when(
     SITE %in% c("IVEE", "NAPL") ~ "MPA",

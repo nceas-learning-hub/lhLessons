@@ -59,7 +59,7 @@ Now, the rendered website version of your repo will show up at a special URL.
     
 GitHub Pages follows a convention like this:
     
-![](images/github_pages.png){fig-alt="GitHub Pages URL pattern"}
+![](images/github_publishing/github_pages.png){fig-alt="GitHub Pages URL pattern"}
      
 Note that it changes from **github.com** to **github.io**
      
@@ -132,5 +132,5 @@ Quarto web pages are a great way to share work in progress with your colleagues.
 
 
 
-![](images/github-pages-index-coreR.png)
+![](images/github_publishing/github-pages-index-coreR.png)
 

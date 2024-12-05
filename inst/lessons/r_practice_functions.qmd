@@ -1,5 +1,5 @@
 ---
-title: Practice Session: Functions
+title: "Practice Session: Functions"
 ---
 
 :::{.callout-tip}

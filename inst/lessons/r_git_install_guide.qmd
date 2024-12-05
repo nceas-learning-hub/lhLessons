@@ -15,7 +15,7 @@ While R is a programming language, RStudio is a software (often referred to as a
 **Note:** RStudio will not work without R installed, and you won't particularly enjoy using R without having RStudio installed. Be sure to install *both*!
 
 ```{r, echo = FALSE, fig.align="center", fig.cap = "Image Credit: Manny Gimond | Accessible at https://mgimond.github.io/ES218/R_vs_RStudio.html"}
-knitr::include_graphics("images/R_RStudio.png")
+knitr::include_graphics("images/r_git_install_guide/R_RStudio.png")
 ```
 
 - **New install:** To install RStudio, visit <https://posit.co/download/rstudio-desktop/>. Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.
@@ -25,7 +25,7 @@ knitr::include_graphics("images/R_RStudio.png")
 - Open RStudio (logo you'll click on shown below): **If upon opening RStudio you are prompted to install Command Line Tools, do it.**
 
 ```{r, echo = FALSE, fig.out="10%", fig.align="center"}
-knitr::include_graphics("images/rstudio-logo.png")
+knitr::include_graphics("images/r_git_install_guide/rstudio-logo.png")
 ```
 
 - Note: you may need to install command line tools and XQuartz. 
@@ -70,7 +70,7 @@ install.packages("gitcreds")
 A lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.
 
 ```{r, echo = FALSE, fig.out="60%", fig.align="center"}
-knitr::include_graphics("images/install-pkg-success.png")
+knitr::include_graphics("images/r_git_install_guide/install-pkg-success.png")
 ```
 
 
@@ -97,7 +97,7 @@ While R is a programming language, RStudio is a software (often referred to as a
 **Note:** RStudio will not work without R installed, and you won't particularly enjoy using R without having RStudio installed. Be sure to install *both*!
 
 ```{r, echo = FALSE, fig.align="center", fig.cap = "Image Credit: Manny Gimond | Accessible at https://mgimond.github.io/ES218/R_vs_RStudio.html"}
-knitr::include_graphics("images/R_RStudio.png")
+knitr::include_graphics("images/r_git_install_guide/R_RStudio.png")
 ```
 
 - **New install:** To install RStudio, visit <https://posit.co/download/rstudio-desktop/>. Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.
@@ -107,7 +107,7 @@ knitr::include_graphics("images/R_RStudio.png")
 - Open RStudio (logo you'll click on shown below): **If upon opening RStudio you are prompted to install Command Line Tools, do it.**
 
 ```{r, echo = FALSE, fig.out="10%", fig.align="center"}
-knitr::include_graphics("images/rstudio-logo.png")
+knitr::include_graphics("images/r_git_install_guide/rstudio-logo.png")
 ```
 
 
@@ -156,7 +156,7 @@ install.packages("gitcreds")
 A lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.
 
 ```{r, echo = FALSE, fig.out="60%", fig.align="center"}
-knitr::include_graphics("images/install-pkg-success.png")
+knitr::include_graphics("images/r_git_install_guide/install-pkg-success.png")
 ```
 
 
