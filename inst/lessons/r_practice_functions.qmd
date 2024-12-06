@@ -46,7 +46,7 @@ We're going to start by creating some simple functions. Recall that the anatomy 
 
 Create a function called `double_it()` that doubles any value input value. Then try out the function, are the values returned what you expect?
 
-:::{.callout-answer}
+::::{.callout-answer}
 ```r
 # create function #
 double_it <- function(x) {
@@ -60,7 +60,7 @@ double_it(x = 24)
 # non explicit notation
 double_it(24)
 ```
-:::
+::::
 :::
 
 
@@ -70,7 +70,7 @@ Write a function called `exclaim_age()` that returns the statement “I am ___ y
 
 Then try out the function, are the values returned what you expect?
 
-:::{.callout-answer}
+::::{.callout-answer}
 ```r
 # write function #
 exclaim_age <- function(age) {
@@ -84,7 +84,7 @@ exclaim_age(age = 12)
 # non explicit notation
 exclaim_age(12)
 ```
-:::
+::::
 :::
 
 ## Functions with Conditionals
@@ -97,7 +97,7 @@ a. Talk to your neighbor about what this function does and what you expect the o
 b. Run the function with some values. Is it running how you expect?
 c. Run the function again, but this time use the function in an arithmetic expression. Is the output what you expect?
 
-:::{.callout-answer}
+::::{.callout-answer}
 
 ```r
 
@@ -118,6 +118,7 @@ find_max <- function(value_1, value_2) {
 # we expect the answer to be 20
 5 * find_max(4, 2)
 ```
+::::
 :::
 
 ## Adding Error or Warning Messages
@@ -130,7 +131,7 @@ Run `find_max(4, 2, 5)` in the Console.
 
 What happens? What kind of message appears? Is it sufficient? If not, consider adding a warning or error message using `warning()` or `stop()`. Remember, use `?function` to access the Help page. Add additional logic to the function, as needed.
 
-:::{.callout-answer}
+::::{.callout-answer}
 
 
 When you run `find_max(4, 2, 5)`, the following error message appears: 
@@ -139,7 +140,7 @@ When you run `find_max(4, 2, 5)`, the following error message appears:
 
 This is an error message that is automatically created by R since our function only requires two parameters. This is a sufficient error message.
 
-:::
+::::
 :::
 
 ::: {.callout-exercise}
@@ -148,15 +149,14 @@ Run `find_max(4, 4)` in the Console.
 
 What happens? What kind of message appears? Is it sufficient? If not, consider adding a warning or error message using `warning()` or `stop()`. Remember, use `?function` to access the Help page. Add additional logic to the function, as needed.
 
-:::{.callout-hint}
+::::{.callout-hint}
 
 When you run `find_max(4, 4)`, no message appears and the function is sent to the Console, but no value is either returned or printed.
 
 To account for this scenario, add an `if()` statement to the beginning of the function, and then use either `warning()` or `stop()`.
-:::
+::::
 
-:::{.callout-answer}
-
+::::{.callout-answer}
 
 ```r
 
@@ -179,7 +179,7 @@ find_max <- function(value_1, value_2) {
 # does the message appear as you expected?
 find_max(4, 4)
 ```
-:::
+::::
 :::
 
 ::: {.callout-exercise}
@@ -188,7 +188,7 @@ Run `find_max(4, "cow")` in the Console.
 
 What happens? What kind of message appears? Is it sufficient? If not, consider adding a warning or error message using `warning()` or `stop()`. Remember, use `?function` to access the Help page. Add additional logic to the function, as needed.
 
-:::{.callout-hint}
+::::{.callout-hint}
 
 When you run `find_max(4, "cow")`, the function runs as is and returns the value "cow". This is not expected because these two values aren't necessarily comparable since they're different data types.
 
@@ -198,10 +198,9 @@ To account for this scenario, add additional logic that **checks the class** of 
 
 The logical operator for OR is `|`. The not-equal-to operator is `!=`.
 
-:::
+::::
 
-:::{.callout-answer}
-
+::::{.callout-answer}
 
 ```r
 
@@ -232,21 +231,21 @@ find_max <- function(value_1, value_2) {
 find_max(4, "cow")
 find_max("cow", 4)
 ```
-:::
+::::
 :::
 
 ::: {.callout-exercise}
 
 Run `find_max(4, 4)` in the Console.  Previously we coded our function to report an error.  But perhaps the user would prefer to have the function return the shared value, as an option.  Add an argument with a reasonable default value to allow the user to control this behavior.  Add additional logic to the function, as needed.
 
-:::{.callout-hint}
+::::{.callout-hint}
 
 Before, if `value_1 == value_2`, we used `stop()` to create an error.  But with an additional argument, we can adjust how the function responds by testing the value of that argument.
 
 Often for arguments that turn on or turn off a behavior, a TRUE/FALSE value makes sense so you could easily include the argument in a logical test.
-:::
+::::
 
-:::{.callout-answer}
+::::{.callout-answer}
 
 ```r
 
@@ -280,7 +279,7 @@ find_max <- function(value_1, value_2, equal_ok = FALSE) {
 find_max(4, 4)
 find_max(4, 4, equal_ok = TRUE)
 ```
-:::
+::::
 :::
 
 
