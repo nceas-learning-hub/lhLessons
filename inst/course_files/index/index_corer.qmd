@@ -10,18 +10,12 @@ format:
 :::
 
 
-COURSE_DESCRIPTION
-<!-- As part of a collaboration between NCEAS and the Delta Science Program, this course has been adapted from [NCEAS coreR course](https://www.nceas.ucsb.edu/learning-hub/core-r), an in-person immersion in R programming for environmental data science. Researchers will gain experience with essential data science tools and best practices to increase their capacity as collaborators, reproducible coders, and open scientists. -->
-
-
 ## NCEAS Expertise
 
 The [National Center for Ecological Analysis and Synthesis (NCEAS)](https://www.nceas.ucsb.edu/), a research affiliate of UCSB, is a leading expert on interdisciplinary data science and works collaboratively to answer the world's largest and most complex questions. The NCEAS approach leverages existing data and employs a team science philosophy to squeeze out all potential insights and solutions efficiently - this is called [synthesis science](https://www.nceas.ucsb.edu/our-approach).
 
 NCEAS has over 25 years of success with this model among working groups and environmental professionals. Together with the Delta Science Program and the Delta Stewardship Council we are excited to pass along skills, workflows, mindsets learn throughout the years.
 
-
-<!-- *June 10 - 13, 2024* -->
 
 :::{.callout-tip}
 ### Learning Objectives

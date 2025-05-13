@@ -1,17 +1,17 @@
-Package: coreRlessons
+Package: lhLessons
 Type: Package
-Title: Lesson documents for use with the coreR package
+Title: Lesson documents for use with the lhCore package
 Version: 2024.11.07
 Author: Casey O'Hara <ohara@nceas.ucsb.edu>
 Maintainer: Casey O'Hara <ohara@nceas.ucsb.edu>
 Description: This package contains all the lessons (as .qmd) and
     associated files (images, data, slides) for building a course
-    using the coreR package.
+    using the lhCore package.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/nceas-learning-hub/coreRlessons
-BugReports: https://github.com/nceas-learning-hub/coreRlessons/issues
+URL: https://github.com/nceas-learning-hub/lhLessons
+BugReports: https://github.com/nceas-learning-hub/lhLessons/issues
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.3.2
