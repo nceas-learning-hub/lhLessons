@@ -8,6 +8,8 @@ exercises: ### for custom theme callouts
   number: false ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html but does not work
 editor: source
 bibliography: book.bib
+execute:
+  freeze: auto
 
 format:
   html:
@@ -17,8 +19,6 @@ format:
     css: banner/banner.css
       ### doesn't render NCEAS logo if put in scss file?
       ### seems to work locally but not when published on GitHub
-    toc: true
-    number-sections: true
     title-block-banner: "blue" ### need this here to "turn on" the title-block-banner
 
 website:
@@ -26,7 +26,7 @@ website:
   reader-mode: false
   repo-url: COURSE_REPO
 
-  favicon: _extensions/nceas-learning-hub/lh_theme/logo_lh_hex.png # learning hub logo on browser tab
+  favicon: logo_lh_hex.png # learning hub logo on browser tab
 
   bread-crumbs: false
   navbar:
