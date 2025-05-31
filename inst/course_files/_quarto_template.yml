@@ -7,19 +7,14 @@ filters:
 exercises: ### for custom theme callouts
   number: false ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html but does not work
 editor: source
-bibliography: book.bib
 execute:
   freeze: auto
 
 format:
-  html:
-    theme:
-       light: _extensions/nceas-learning-hub/theme/theme_light.scss
-       dark: _extensions/nceas-learning-hub/theme/theme_dark.scss
-    title-block-banner: "blue" ### need this here to "turn on" the title-block-banner
+  theme-html
 
 website:
-  title: "COURSE_TITLE (COURSE_DATES)"
+  title: "COURSE_TITLE"
   reader-mode: false
   repo-url: COURSE_REPO
 
