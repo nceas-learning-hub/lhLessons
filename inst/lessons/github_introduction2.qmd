@@ -1,0 +1,92 @@
+---
+title: Git and GitHub important updates
+---
+
+
+:::{.callout-tip}
+## Learning Objectives
+
+-   Apply the principles of Git to track and manage changes of a project
+-   Utilize the Git workflow including pulling changes, staging modified files, committing changes, pulling again to incorporate remote changes, and pushing changes to a remote repository
+-   Create and configure Git repositories using different workflows
+:::
+
+## Introduction to Version Control
+
+![](images/github_introduction/phd_comics_final.png){width="70%" fig-align="center"}
+
+Every file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when bugs are discovered. Sometimes those fixes lead to even more bugs, leading to more changes in the code base. Data files get combined together. Sometimes those same files are split and combined again. In just one research project, we can expect thousands of changes to occur. 
+
+These changes are important to track, and yet, we often use simplistic file names to do so. Many of us have experienced renaming a document or script multiple times with the disingenuous addition of "final" to the file name (like the comic above demonstrates).
+
+You might think there is a better way, and you'd be right: **version control**. Version control provides an organized and transparent way to track changes in code and additional files. This practice was designed for software development, but is easily applicable to scientific programming.
+
+There are many benefits to using a version control software including:
+
+-   **Maintain a history** of your research project's development while keeping your workspace clean
+-   **Facilitate collaboration** and transparency when working on teams
+-   **Explore bugs or new features** without disrupting your team members' work
+-   and more!
+
+The version control system we'll be diving into is Git, the most widely used modern version control system in the world.
+
+## Introduction to Git + GitHub
+
+Before diving into the details of Git and how to use it, let's start with a motivating example that's representative of the types of problems Git can help us solve.
+
+### A Motivating Example
+
+Say, for example, you're working on an analysis in R and you've got it into a state you're pretty happy with. We'll call this version 1:
+
+:::{.column-body-outset-right}
+![](images/github_introduction/git-intro-slide01.png)
+:::
+
+You come into the office the following day and you have an email from your boss, "Hey, you know what this model needs?"
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide02.png)
+:::
+
+You're not entirely sure what she means but you figure there's only one thing she could be talking about: more cowbell. So you add it to the model in order to really explore the space.
+
+But you're worried about losing track of the old model so, instead of editing the code in place, you comment out the old code and put as serious a warning as you can muster in a comment above it.
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide03.png)
+:::
+
+Commenting out code you don't want to lose is something probably all of us have done at one point or another but it's really hard to understand why you did this when you come back years later or you when you send your script to a colleague. Luckily, there's a better way: Version control. Instead of commenting out the old code, we can change the code in place and tell Git to commit our change. So now we have two distinct versions of our analysis and we can always see what the previous version(s) look like.
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide04.png)
+:::
+
+You may have noticed something else in the diagram above: Not only can we save a new version of our analysis, we can also write as much text as we like about the change in the commit message. In addition to the commit message, Git also tracks who, when, and where the change was made.
+
+Imagine that some time has gone by and you've committed a third version of your analysis, version 3, and a colleague emails with an idea: What if you used machine learning instead?
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide05.png)
+:::
+
+Maybe you're not so sure the idea will work out and this is where a tool like Git shines. Without a tool like Git, we might copy analysis.R to another file called analysis-ml.R which might end up having mostly the same code except for a few lines. This isn't particularly problematic until you want to make a change to a bit of shared code and now you have to make changes in two files, if you even remember to.
+
+Instead, with Git, we can start a branch. Branches allow us to confidently experiment on our code, all while leaving the old code in tact and recoverable.
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide06.png)
+:::
+
+So you've been working in a branch and have made a few commits on it and your boss emails again asking you to update the model in some way. If you weren't using a tool like Git, you might panic at this point because you've rewritten much of your analysis to use a different method but your boss wants change to the old method.
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide07.png)
+:::
+
+But with Git and branches, we can continue developing our main analysis at the same time as we are working on any experimental branches. Branches are great for experiments but also great for organizing your work generally.
+
+:::{.column-body-outset}
+![](images/github_introduction/git-intro-slide08.png)
+:::
+
