@@ -1,6 +1,5 @@
 ---
 title: "Practice Session: Collaborative Report"
-bibliography: book.bib
 ---
 
 :::{.callout-tip}
