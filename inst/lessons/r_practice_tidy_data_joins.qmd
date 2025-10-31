@@ -70,14 +70,33 @@ Read in the data and store the data frames as `bird_observations`, `sites`, `sur
 
 ```{r}
 #| code-summary: "Answer"
-#| echo: true
-#| eval: true
+#| echo: false
+#| eval: false
 
 # read in data using download links
+### NOTE THESE LINKS NO LONGER WORK!
+
 bird_observations <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-cap.256.10&entityid=53edaa7a0e083013d9bf20322db1780e")
 surveys <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-cap.256.10&entityid=b2466fa5cb5ed7ee1ea91398fc291c59")
 sites <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-cap.256.10&entityid=81bf72420e69077097fb0790dcdc63a6")
 taxalist <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-cap.256.10&entityid=58f863b7e3066e68536a9cacdc7bd58e")
+```
+
+```{r}
+#| code-summary: "Answer"
+#| echo: false
+#| eval: true
+
+### NOTE THIS CHUNK IS HIDDEN (echo: false) AND EVALUATED (eval: true)
+### FOR THE PURPOSES OF RENDERING THE LESSON, WITH EXTRA FOLDER IN PATH.
+### THE FOLLOWING CHUNK (echo: true and eval: false) IS FOR WHERE USERS SHOULD
+### SAVE FILES.
+
+bird_observations <- read_csv(here::here("data/r_practice_tidy_data_joins/52_pp52_birds_1.csv"))
+surveys <- read_csv(here::here("data/r_practice_tidy_data_joins/52_pp52_surveys_1.csv"))
+sites <- read_csv(here::here("data/r_practice_tidy_data_joins/52_pp52_sites_1.csv"))
+taxalist <- read_csv(here::here("data/r_practice_tidy_data_joins/52_pp52_taxalist_1.csv"))
+
 ```
 
 ```{r}

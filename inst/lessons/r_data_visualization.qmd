@@ -57,13 +57,39 @@ library(viridis) # colorblind friendly color palette
 
 
 
-2. Load the data directly from the [EDI Data Repository: Sacramento-San Joaquin Delta Socioecological Monitoring ](https://portal.edirepository.org/nis/mapbrowse?packageid=edi.587.1). Navigate to the link above, scroll down and under *Resources*, hover over the "Download" button for the "Socioecological monitoring data", right click, and select "Copy Link Address".
+2. Load the data directly from the [EDI Data Repository: Sacramento-San Joaquin Delta Socioecological Monitoring ](https://portal.edirepository.org/nis/mapbrowse?packageid=edi.587.1). Navigate to the link above, scroll down and under *Resources*, hover over the "Download" button for the "Socioecological monitoring data", right click, and save to your data folder.
 
 ```{r}
 #| message: false
 #| warning: false
+#| echo: false
+#| eval: false
+
+### THIS LINK NO LONGER WORKS
 
 delta_visits_raw <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.587.1&entityid=cda8c1384af0089b506d51ad8507641f")
+
+```
+
+```{r}
+#| echo: false
+#| eval: true
+
+### NOTE THIS CHUNK IS HIDDEN (echo: false) AND EVALUATED (eval: true)
+### FOR THE PURPOSES OF RENDERING THE LESSON, WITH EXTRA FOLDER IN PATH.
+### THE FOLLOWING CHUNK (echo: true and eval: false) IS FOR WHERE USERS SHOULD
+### SAVE FILES.
+
+delta_visits_raw <- read_csv(here::here("data/r_data_visualization/Socioecological_monitoring_data.csv"))
+
+```
+
+```{r}
+#| echo: true
+#| eval: false
+
+# read in data from the data directory after manually downloading data 
+delta_visits_raw <- read_csv(here::here("data/Socioecological_monitoring_data.csv"))
 
 ```
 
