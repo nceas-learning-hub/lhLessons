@@ -14,17 +14,40 @@ After completing this session, you will be able to:
 ::: callout-note
 ## Acknowledgments
 This activity is largely based on the [LEGO® Metadata for Reproducibility game pack](http://eprints.gla.ac.uk/196477/), which was developed by [Mary Donaldson](https://orcid.org/0000-0002-1936-3499) and [Matt Mahon](https://orcid.org/0000-0001-8950-8422).
+
+This work is licensed under the Creative Commons Attribution 4.0 International License. To view a 
+copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
 :::
 
 ## Instructions
 
-1.  Gather into small groups
-2.  Get LEGO® blocks and worksheets 
-    * [Instructions](resources/activity_reproducibility_lego/lego_activity_instructions.pdf)
-    * Metadata template [.pdf](resources/activity_reproducibility_lego/template_lego_activity_metadata.pdf) | [.docx](resources/activity_reproducibility_lego/template_lego_activity_metadata.docx)
-3.  Follow <span style="background: yellow;">Creation phase instructions</span> (40 min)
-4.  Hand off materials and metadata to another team (2 min)
-5.  Follow <span style="background: #bbccff;">Replication phase instructions</span> (25 min)
+*  Gather into small groups
+*  Get LEGO® blocks and (optional) open the template
+    * Metadata template [.docx](resources/activity_reproducibility_lego/template_lego_activity_metadata.docx)
+
+<details>
+<summary><span style="background: yellow;">**Creation phase instructions**</span> (40 min)</summary>
+1. Build a small house / building / structure of your choice using the provided 
+LEGO blocks. Feel free to make this as complex and detailed as you would 
+like and accessorize as desired. 
+2. Keep notes on how to replicate the build, optionally using the template provided. 
+3. Let an instructor know when you’re done and they will take a picture of 
+the finished build. 
+4. Disassemble build and prepare setup for the replication phase. 
+</details>
+
+
+***Hand off materials and metadata to another team (2 min)***
+
+<details>
+<summary><span style="background: #bbccff;">**Replication phase instructions**</span> (25 min)</summary>
+1. Using the resources provided by the previous group, attempt to replicate 
+their build.  
+2. Consider which information was helpful and what additional information 
+you would have found useful in attempting to replicate the previous build.  
+3. Let an instructor know when you’re done and they will take a picture of 
+the finished build. 
+</details>
 
 <span style="color: #88888888;">(instructor guide [here](resources/activity_reproducibility_lego/instructional_guide_reproducibility_activity.pdf))</span>
 
