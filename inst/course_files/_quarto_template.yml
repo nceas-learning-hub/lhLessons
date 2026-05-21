@@ -16,6 +16,8 @@ execute:
 format:
   theme-html:
     code-annotations: hover ### tool tip style footnotes for code
+    link-external-newwindow: true
+    link-external-icon: true
 
 website:
   title: "COURSE_TITLE"
