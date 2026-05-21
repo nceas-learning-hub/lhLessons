@@ -35,6 +35,12 @@ _Table Color Legend:_ <span style="color:#6a994e">{{<fa screwdriver-wrench >}} T
 
 ### Day 1
 
+<!-- Color codes and FontAwesome icons:
+Non-tech: <span style="color:#118ab2">{{< fa people-group >}} **Lesson Description**</span>
+Technical: <span style="color:#6a994e">{{< fa screwdriver-wrench >}} **Lesson Description**</span>
+Synthesis: <span style="color:#ef476f">{{< fa rocket >}} **Free Synthesis Work**</span>
+-->
+
 | Day | Time | Module Name | Primary Instructor |
 |:--:|:-------:|:-------------------|:------------|
 | 1 | 8:30 - 9a | **Welcome & Intro to Week** | - |
@@ -58,7 +64,6 @@ _Table Color Legend:_ <span style="color:#6a994e">{{<fa screwdriver-wrench >}} T
 | 2 | 2:30 - 3p | _Break_ | - |
 | 2 | 3 - 4:30p | <span style="color:#118ab2">{{<fa people-group >}} **Logic Models & <br> Synthesis Development**</span> | Casey O'Hara |
 
-^\*^ _Tentatively choose your group by EoD_
 
 ### Day 3
 
