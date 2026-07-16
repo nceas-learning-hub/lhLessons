@@ -1,5 +1,7 @@
 ---
 title: Provenance and Reproducibility
+categories: [provenance, reproducibility, lecture, intermediate]
+description: "Introduces computational provenance and reproducibility concepts, and demonstrates building a reproducible research compendium with rrtools and rticles."
 ---
 
 :::{.callout-tip}

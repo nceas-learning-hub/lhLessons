@@ -1,5 +1,7 @@
 ---
 title: "Practice Session: Functions"
+categories: [functions, activity, beginner]
+description: "Practice exercises for writing, testing, and adding error/warning messages to custom R functions."
 ---
 
 :::{.callout-tip}

@@ -1,5 +1,7 @@
 ---
 title: Installing R and Git on Your Computer
+categories: [computing-setup, git, setup, beginner]
+description: "Step-by-step installation instructions for R, RStudio, Quarto, Git, and related R packages on macOS and Windows."
 ---
 
 ## Installation steps for MacOS

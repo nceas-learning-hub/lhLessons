@@ -1,5 +1,7 @@
 ---
 title: "Developing a Strategic Communications Plan"
+categories: [communication, lecture, beginner]
+description: "Workshop on developing a science communications plan and brand identity, including slogan, audience, and personality."
 ---
 
 
