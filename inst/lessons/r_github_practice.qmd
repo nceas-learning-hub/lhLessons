@@ -1,0 +1,17 @@
+---
+title: R + GitHub Practice Session
+---
+
+:::{.callout-learning}
+After completing this session, you will be able to:
+
+-   bullet pointed learning objectives
+:::
+
+
+* set up group repo(s) in Delta org
+* Set up Teams for github and add to group repo(s)
+* create issues reflecting tasks to be completed
+* assign issues to team members
+* add tags to issues to track progress
+* set up a project board to visualize workflow
