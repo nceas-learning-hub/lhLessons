@@ -1,6 +1,8 @@
 ---
 title: Project Documentation & Organization
-bibliography: resources/project_doc_organization/refs.bib
+bibliography: resources/lecture_project_doc_organization/refs.bib
+categories: [reproducibility, data-management, project-management, lecture, beginner]
+description: "Covers project documentation and file organization best practices for reproducibility, plus an introduction to generative AI use-cases, modalities, and drawbacks in research workflows."
 ---
 
 :::{.callout-learning}
@@ -53,7 +55,7 @@ Feel free to put your personal flair on the README! If there is other informatio
 
 ### Fundamental Structure
 
-<img src="images/project_doc_organization/comic_xkcd-folders.png" alt="One stick figure looks in despair at another's computer where many badly-named files are present. At the bottom text reads 'protip: never look in someone else's documents folder'" width="25%" align="right">
+<img src="images/lecture_project_doc_organization/comic_xkcd-folders.png" alt="One stick figure looks in despair at another's computer where many badly-named files are present. At the bottom text reads 'protip: never look in someone else's documents folder'" width="25%" align="right">
 
 <u>The simplest way of beginning a reproducible project is adopting a good file organization system</u>. There is no single "best" way of organizing your projects' files as long as you are _consistent_. Consistency will make your system--whatever that consists of--understandable to others.
 
@@ -103,7 +105,7 @@ Computers sort files/folders alphabetically and numerically. Sorting alphabetica
 
 Spaces and special characters (e.g., é, ü, etc.) cause errors in some computers (particularly Windows operating systems). You can replace spaces with underscores or hyphens to increase machine readability. Avoid using special characters as much as possible. You should also be consistent about casing (i.e., lower vs. uppercase).
 
-#### Delimeters
+#### Delimiters
 
 **Names should use consistent delimiters.**
 

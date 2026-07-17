@@ -57,7 +57,7 @@ If a new lesson genuinely doesn't fit any existing topic tag, it's fine to intro
 new one — just keep it lowercase, hyphenated, and singular/general like the existing
 terms, and mention the addition when summarizing the change.
 
-## Current Lesson Inventory (43 lessons)
+## Current Lesson Inventory (46 lessons)
 
 ### Git & GitHub
 - `git_setup.qmd` — Git and GitHub Setup (setup, beginner)
@@ -101,6 +101,7 @@ terms, and mention the addition when summarizing the change.
 - `lecture_data_mgmt_discovery.qmd` — Data Management & Data Discovery (lecture, intermediate)
 - `lecture_data_mgmt_reproducibility.qmd` — Data Management and Reproducibility (lecture, beginner)
 - `lecture_publishing_data.qmd` — Publishing Synthesis Data (lecture, intermediate)
+- `lecture_project_doc_organization.qmd` — Project Documentation & Organization (lecture, beginner)
 - `r_provenance_reproducibility.qmd` — Provenance and Reproducibility (lecture, intermediate)
 - `activity_reproducibility_lego.qmd` — Reproducibility: a LEGO Activity (activity, beginner)
 
@@ -120,6 +121,8 @@ terms, and mention the addition when summarizing the change.
 - `lecture_facilitating_working_group.qmd` — Facilitating a Successful Working Group (lecture, beginner)
 - `activity_thinking_preferences.qmd` — Thinking Preferences & Meeting Design (activity, beginner)
 - `synthesis_crafting_project_ideas.qmd` — Crafting Synthesis Project Ideas (lecture, intermediate)
+- `synthesis_logic_models.qmd` — Logic Models and Synthesis Development (lecture, intermediate)
+- `lecture_intellectual_credit.qmd` — Intellectual Credit (lecture, intermediate)
 
 ### Templates
 - `blank_placeholder.qmd` — Blank placeholder lesson (template)
@@ -128,5 +131,5 @@ terms, and mention the addition when summarizing the change.
 
 - When lessons are added or removed, update both the vocabulary section (if new terms
   are introduced) and the inventory list above.
-- The inventory count (43, as of July 2026) is a quick sanity check — compare against
+- The inventory count (46, as of July 2026) is a quick sanity check — compare against
   `ls inst/lessons/*.qmd | wc -l` when this file is next revisited.
