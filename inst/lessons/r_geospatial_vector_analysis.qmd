@@ -690,19 +690,20 @@ rivers_3338_sf <- read_sf(here("data/ak_regions/ak_rivers_simp.shp"))
 rivers_3338_sf <- read_sf(here("data/r_geospatial_vector_analysis/ak_rivers_simp.shp"))
 ```
 
-
+<!-- NOTE: the following code chunk takes a VERY long time to run - so it is set to eval: false and a static image is used in its place. -->
 
 ```{r}
 #| label: map with rivers and towns
 #| fig-width: 8 
 #| fig-height: 4
+#| eval: false
 ggplot() +
     geom_sf(data = pop_rgn_3338_sf, 
             mapping = aes(fill = total_pop)) +
     geom_sf(data = rivers_3338_sf,
             aes(linewidth = StrOrder),    # <1>
             color = 'blue', alpha = .5) +
-    scale_linewidth(range = c(0.05, 0.5), # <1>
+    scale_linewidth(range = c(0.05, 0.50), # <1>
                     guide = "none") +
     geom_sf(data = pop_3338_sf, size = 0.5, color = 'grey20') +
     labs(title = "Total Population by Alaska Region",
@@ -714,7 +715,7 @@ ggplot() +
 ```
 1. Stream order is aesthetically mapped to river line thickness - bigger rivers, thicker lines!
 
-
+![](images/r_geospatial_vector_analysis/ak_map_with_rivers_and_towns.png)
 
 ### Incorporate Base Maps Into Static Maps
 
