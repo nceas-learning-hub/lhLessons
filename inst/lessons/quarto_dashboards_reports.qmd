@@ -918,7 +918,7 @@ or run `rsconnect::deployApp("path/to/your/dashboard")` in the Console.
 Click the blue **Publish** button in the top-right corner of the running app window.
 :::
 
-See the [Shiny session](s05_shiny_introduction.qmd) for full account setup instructions.
+See the Shiny session for full account setup instructions.
 
 :::
 
