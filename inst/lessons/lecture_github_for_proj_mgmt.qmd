@@ -4,6 +4,16 @@ categories: [github, project-management, lecture, beginner]
 description: "How to structure a GitHub repository and use GitHub Issues and Projects to support project management and communication."
 ---
 
+:::{.callout-learning}
+After completing this session, you will be able to:
+
+- Briefly introduce Git and GitHub
+- Provide an overview of a GitHub Repository
+- Understand how GitHub can serve as a Project Management tool
+- Know how to create and leverage GitHub Issues
+- Be familiar with how to set up and customize GitHub Projects
+:::
+
 
 <br>
 
@@ -14,16 +24,8 @@ description: "How to structure a GitHub repository and use GitHub Issues and Pro
 <br>
 
 
-### Workshop Description {.unnumbered}
+## Overview
 GitHub is mainly known as a version control platform that facilitates collaborative coding. Effective collaboration (with yourself or colleagues) requires good communication. GitHub offers several features that can support communication and project management. During this workshop, we will discuss and practice structuring a GitHub repository, taking advantage of GitHub Issues and Projects. 
-
-### Learning Objectives {.unnumbered}
-- Briefly introduce Git and GitHub
-- Provide an overview of a GitHub Repository
-- Understand how GitHub can serve as a Project Management tool
-- Know how to create and leverage GitHub Issues
-- Be familiar with how to set up and customize GitHub Projects
-
 
 :::callout-important
 ## Missed the training?

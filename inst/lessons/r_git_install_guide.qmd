@@ -4,6 +4,21 @@ categories: [computing-setup, git, setup, beginner]
 description: "Step-by-step installation instructions for R, RStudio, Quarto, Git, and related R packages on macOS and Windows."
 ---
 
+:::{.callout-learning}
+After completing this session, you will be able to:
+
+- Install or update R, RStudio, and Quarto on your computer
+- Check whether Git is installed, and install it if it is not
+- Install the R packages used in the course
+- Create a GitHub account
+- Troubleshoot common problems with installing the software
+:::
+
+## Overview
+
+This guide walks through installing the software used in the course: R, RStudio, Quarto, Git, and the required R packages, plus creating a GitHub account.  Follow the steps for your operating system (macOS or Windows).  Troubleshooting tips are at the end.
+
+
 ## Installation steps for MacOS
 
 ### Install or update R

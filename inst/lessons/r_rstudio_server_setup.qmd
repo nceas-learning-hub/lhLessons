@@ -4,13 +4,17 @@ categories: [computing-setup, setup, beginner]
 description: "RStudio Server basics, creating and organizing an R Project, and understanding absolute versus relative file paths."
 ---
 
-:::{.callout-tip}
-## Learning Objectives
+:::{.callout-learning}
+After completing this session, you will be able to:
 
 - Practice creating an R Project
 - Organize an R Project for effective project management
 - Understand how to move in an R Project using paths and working directories
 :::
+
+## Overview
+
+In this lesson you will log on to the RStudio Server, create an R Project, and organize it with sub-directories.  You will also learn how paths and working directories work, so that you can move around in your R Project.
 
 ## Logon to the RStudio Server
 

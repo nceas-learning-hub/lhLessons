@@ -4,8 +4,8 @@ categories: [tidy-data, data-wrangling, activity, intermediate, practice]
 description: "Practice exercises joining bird survey data tables together and identifying primary and foreign keys."
 ---
 
-:::{.callout-tip}
-## Learning Objectives
+:::{.callout-learning}
+After completing this session, you will be able to:
 
 -   Practice joining tables together
 -   Practice identifying primary and foreign keys
@@ -17,6 +17,10 @@ description: "Practice exercises joining bird survey data tables together and id
 
 These exercises are adapted from Allison Horst's EDS 221: Scientific Programming Essentials Course for the Bren School's Master of Environmental Data Science program.
 :::
+
+## Overview
+
+In this practice session you will work with bird survey data from the central Arizona-Phoenix metropolitan area.  In Exercise 1 you will practice joining tables with `left_join()`, `full_join()`, and `inner_join()`.  In Exercise 2 you will practice wrangling and joining the data, including cleaning up inconsistent values, and then save your work with the Git and GitHub workflow.
 
 ## About the data {.unnumbered}
 

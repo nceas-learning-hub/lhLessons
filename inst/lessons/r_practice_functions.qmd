@@ -4,8 +4,8 @@ categories: [functions, activity, beginner, practice]
 description: "Practice exercises for writing, testing, and adding error/warning messages to custom R functions."
 ---
 
-:::{.callout-tip}
-## Learning Objectives
+:::{.callout-learning}
+After completing this session, you will be able to:
 
 -   Practice creating functions
 -   Practice testing functions
@@ -19,6 +19,10 @@ description: "Practice exercises for writing, testing, and adding error/warning 
 These exercises are adapted from Allison Horst's EDS 221: Scientific Programming Essentials Course for the Bren School's Master of Environmental Data Science program.
 
 :::
+
+## Overview
+
+In this practice session you will write, test, and document your own R functions.  You will start with a warm-up, then write functions that use conditionals, and finally add informative error and warning messages to your functions.  You will finish by saving your work with the Git and GitHub workflow.
 
 ## Getting Ready
 
