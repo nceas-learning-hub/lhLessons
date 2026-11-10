@@ -1,7 +1,7 @@
 Package: lhLessons
 Type: Package
 Title: Lesson documents for use with the lhCore package
-Version: 2026.11.08
+Version: 2026.11.10
 Author: Casey O'Hara <ohara@nceas.ucsb.edu>
 Maintainer: Casey O'Hara <ohara@nceas.ucsb.edu>
 Description: This package contains all the lessons (as .qmd) and
